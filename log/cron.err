@@ -1,0 +1,440 @@
+2017-08-25T11:44:51.120+0000	writing node-cost.items to 
+2017-08-25T11:44:51.120+0000	writing node-cost.balances to 
+2017-08-25T11:44:51.121+0000	writing node-cost.users to 
+2017-08-25T11:44:51.121+0000	writing node-cost.groups to 
+2017-08-25T11:44:51.124+0000	done dumping node-cost.balances (24 documents)
+2017-08-25T11:44:51.125+0000	writing node-cost.storage to 
+2017-08-25T11:44:51.139+0000	done dumping node-cost.users (2 documents)
+2017-08-25T11:44:51.139+0000	done dumping node-cost.groups (1 document)
+2017-08-25T11:44:51.140+0000	done dumping node-cost.storage (1 document)
+2017-08-25T11:44:51.164+0000	done dumping node-cost.items (2697 documents)
+tar: Removing leading `/' from member names
+2017-08-26T11:44:51.261+0000	writing node-cost.items to 
+2017-08-26T11:44:51.262+0000	writing node-cost.balances to 
+2017-08-26T11:44:51.262+0000	writing node-cost.users to 
+2017-08-26T11:44:51.263+0000	writing node-cost.groups to 
+2017-08-26T11:44:51.265+0000	done dumping node-cost.groups (1 document)
+2017-08-26T11:44:51.266+0000	writing node-cost.storage to 
+2017-08-26T11:44:51.267+0000	done dumping node-cost.storage (1 document)
+2017-08-26T11:44:51.268+0000	done dumping node-cost.users (2 documents)
+2017-08-26T11:44:51.269+0000	done dumping node-cost.balances (24 documents)
+2017-08-26T11:44:51.293+0000	done dumping node-cost.items (2703 documents)
+tar: Removing leading `/' from member names
+2017-08-27T11:44:51.352+0000	writing node-cost.items to 
+2017-08-27T11:44:51.353+0000	writing node-cost.balances to 
+2017-08-27T11:44:51.353+0000	writing node-cost.users to 
+2017-08-27T11:44:51.354+0000	writing node-cost.groups to 
+2017-08-27T11:44:51.362+0000	done dumping node-cost.balances (24 documents)
+2017-08-27T11:44:51.362+0000	writing node-cost.storage to 
+2017-08-27T11:44:51.363+0000	done dumping node-cost.groups (1 document)
+2017-08-27T11:44:51.363+0000	done dumping node-cost.users (2 documents)
+2017-08-27T11:44:51.365+0000	done dumping node-cost.storage (1 document)
+2017-08-27T11:44:51.388+0000	done dumping node-cost.items (2709 documents)
+tar: Removing leading `/' from member names
+2017-08-28T11:44:51.448+0000	writing node-cost.balances to 
+2017-08-28T11:44:51.449+0000	writing node-cost.items to 
+2017-08-28T11:44:51.449+0000	writing node-cost.groups to 
+2017-08-28T11:44:51.450+0000	writing node-cost.users to 
+2017-08-28T11:44:51.451+0000	done dumping node-cost.balances (24 documents)
+2017-08-28T11:44:51.452+0000	writing node-cost.storage to 
+2017-08-28T11:44:51.452+0000	done dumping node-cost.storage (1 document)
+2017-08-28T11:44:51.457+0000	done dumping node-cost.groups (1 document)
+2017-08-28T11:44:51.458+0000	done dumping node-cost.users (2 documents)
+2017-08-28T11:44:51.486+0000	done dumping node-cost.items (2712 documents)
+tar: Removing leading `/' from member names
+2017-08-29T11:44:51.543+0000	writing node-cost.users to 
+2017-08-29T11:44:51.544+0000	writing node-cost.groups to 
+2017-08-29T11:44:51.544+0000	writing node-cost.items to 
+2017-08-29T11:44:51.545+0000	writing node-cost.balances to 
+2017-08-29T11:44:51.547+0000	done dumping node-cost.users (2 documents)
+2017-08-29T11:44:51.547+0000	writing node-cost.storage to 
+2017-08-29T11:44:51.547+0000	done dumping node-cost.groups (1 document)
+2017-08-29T11:44:51.548+0000	done dumping node-cost.storage (1 document)
+2017-08-29T11:44:51.551+0000	done dumping node-cost.balances (24 documents)
+2017-08-29T11:44:51.574+0000	done dumping node-cost.items (2713 documents)
+tar: Removing leading `/' from member names
+2017-08-30T11:44:51.639+0000	writing node-cost.items to 
+2017-08-30T11:44:51.640+0000	writing node-cost.users to 
+2017-08-30T11:44:51.640+0000	writing node-cost.groups to 
+2017-08-30T11:44:51.641+0000	writing node-cost.balances to 
+2017-08-30T11:44:51.645+0000	done dumping node-cost.users (2 documents)
+2017-08-30T11:44:51.646+0000	writing node-cost.storage to 
+2017-08-30T11:44:51.658+0000	done dumping node-cost.balances (24 documents)
+2017-08-30T11:44:51.658+0000	done dumping node-cost.groups (1 document)
+2017-08-30T11:44:51.659+0000	done dumping node-cost.storage (1 document)
+2017-08-30T11:44:51.675+0000	done dumping node-cost.items (2714 documents)
+tar: Removing leading `/' from member names
+2017-08-31T11:44:51.733+0000	writing node-cost.items to 
+2017-08-31T11:44:51.733+0000	writing node-cost.users to 
+2017-08-31T11:44:51.734+0000	writing node-cost.groups to 
+2017-08-31T11:44:51.734+0000	writing node-cost.balances to 
+2017-08-31T11:44:51.736+0000	done dumping node-cost.users (2 documents)
+2017-08-31T11:44:51.736+0000	writing node-cost.storage to 
+2017-08-31T11:44:51.737+0000	done dumping node-cost.storage (1 document)
+2017-08-31T11:44:51.752+0000	done dumping node-cost.balances (24 documents)
+2017-08-31T11:44:51.753+0000	done dumping node-cost.groups (1 document)
+2017-08-31T11:44:51.778+0000	done dumping node-cost.items (2715 documents)
+tar: Removing leading `/' from member names
+2017-09-01T11:44:51.850+0000	writing node-cost.items to 
+2017-09-01T11:44:51.851+0000	writing node-cost.balances to 
+2017-09-01T11:44:51.852+0000	writing node-cost.users to 
+2017-09-01T11:44:51.853+0000	writing node-cost.groups to 
+2017-09-01T11:44:51.857+0000	done dumping node-cost.groups (1 document)
+2017-09-01T11:44:51.857+0000	writing node-cost.storage to 
+2017-09-01T11:44:51.857+0000	done dumping node-cost.users (2 documents)
+2017-09-01T11:44:51.859+0000	done dumping node-cost.balances (25 documents)
+2017-09-01T11:44:51.862+0000	done dumping node-cost.storage (1 document)
+2017-09-01T11:44:51.889+0000	done dumping node-cost.items (2718 documents)
+tar: Removing leading `/' from member names
+2017-09-02T11:44:51.950+0000	writing node-cost.items to 
+2017-09-02T11:44:51.951+0000	writing node-cost.balances to 
+2017-09-02T11:44:51.951+0000	writing node-cost.groups to 
+2017-09-02T11:44:51.951+0000	writing node-cost.users to 
+2017-09-02T11:44:51.953+0000	done dumping node-cost.balances (25 documents)
+2017-09-02T11:44:51.954+0000	writing node-cost.storage to 
+2017-09-02T11:44:51.958+0000	done dumping node-cost.storage (1 document)
+2017-09-02T11:44:51.966+0000	done dumping node-cost.groups (1 document)
+2017-09-02T11:44:51.967+0000	done dumping node-cost.users (2 documents)
+2017-09-02T11:44:51.981+0000	done dumping node-cost.items (2721 documents)
+tar: Removing leading `/' from member names
+2017-09-03T11:44:52.043+0000	writing node-cost.items to 
+2017-09-03T11:44:52.044+0000	writing node-cost.balances to 
+2017-09-03T11:44:52.044+0000	writing node-cost.users to 
+2017-09-03T11:44:52.044+0000	writing node-cost.groups to 
+2017-09-03T11:44:52.046+0000	done dumping node-cost.users (2 documents)
+2017-09-03T11:44:52.046+0000	writing node-cost.storage to 
+2017-09-03T11:44:52.047+0000	done dumping node-cost.storage (1 document)
+2017-09-03T11:44:52.048+0000	done dumping node-cost.balances (25 documents)
+2017-09-03T11:44:52.048+0000	done dumping node-cost.groups (1 document)
+2017-09-03T11:44:52.081+0000	done dumping node-cost.items (2722 documents)
+tar: Removing leading `/' from member names
+2017-09-04T11:44:52.144+0000	writing node-cost.items to 
+2017-09-04T11:44:52.145+0000	writing node-cost.balances to 
+2017-09-04T11:44:52.145+0000	writing node-cost.users to 
+2017-09-04T11:44:52.146+0000	writing node-cost.groups to 
+2017-09-04T11:44:52.146+0000	done dumping node-cost.balances (25 documents)
+2017-09-04T11:44:52.146+0000	writing node-cost.storage to 
+2017-09-04T11:44:52.148+0000	done dumping node-cost.users (2 documents)
+2017-09-04T11:44:52.150+0000	done dumping node-cost.groups (1 document)
+2017-09-04T11:44:52.163+0000	done dumping node-cost.storage (1 document)
+2017-09-04T11:44:52.182+0000	done dumping node-cost.items (2724 documents)
+tar: Removing leading `/' from member names
+2017-09-05T11:44:52.239+0000	writing node-cost.items to 
+2017-09-05T11:44:52.240+0000	writing node-cost.balances to 
+2017-09-05T11:44:52.240+0000	writing node-cost.users to 
+2017-09-05T11:44:52.240+0000	writing node-cost.groups to 
+2017-09-05T11:44:52.241+0000	done dumping node-cost.balances (25 documents)
+2017-09-05T11:44:52.241+0000	writing node-cost.storage to 
+2017-09-05T11:44:52.243+0000	done dumping node-cost.groups (1 document)
+2017-09-05T11:44:52.244+0000	done dumping node-cost.storage (1 document)
+2017-09-05T11:44:52.244+0000	done dumping node-cost.users (2 documents)
+2017-09-05T11:44:52.262+0000	done dumping node-cost.items (2729 documents)
+tar: Removing leading `/' from member names
+2017-09-06T11:44:52.311+0000	writing node-cost.items to 
+2017-09-06T11:44:52.311+0000	writing node-cost.balances to 
+2017-09-06T11:44:52.312+0000	writing node-cost.users to 
+2017-09-06T11:44:52.312+0000	writing node-cost.groups to 
+2017-09-06T11:44:52.313+0000	done dumping node-cost.users (2 documents)
+2017-09-06T11:44:52.313+0000	writing node-cost.storage to 
+2017-09-06T11:44:52.314+0000	done dumping node-cost.groups (1 document)
+2017-09-06T11:44:52.314+0000	done dumping node-cost.balances (25 documents)
+2017-09-06T11:44:52.316+0000	done dumping node-cost.storage (1 document)
+2017-09-06T11:44:52.334+0000	done dumping node-cost.items (2736 documents)
+tar: Removing leading `/' from member names
+2017-09-07T11:44:52.375+0000	writing node-cost.items to 
+2017-09-07T11:44:52.375+0000	writing node-cost.balances to 
+2017-09-07T11:44:52.376+0000	writing node-cost.users to 
+2017-09-07T11:44:52.376+0000	writing node-cost.groups to 
+2017-09-07T11:44:52.379+0000	done dumping node-cost.balances (25 documents)
+2017-09-07T11:44:52.379+0000	writing node-cost.storage to 
+2017-09-07T11:44:52.380+0000	done dumping node-cost.groups (1 document)
+2017-09-07T11:44:52.380+0000	done dumping node-cost.users (2 documents)
+2017-09-07T11:44:52.386+0000	done dumping node-cost.storage (1 document)
+2017-09-07T11:44:52.402+0000	done dumping node-cost.items (2742 documents)
+tar: Removing leading `/' from member names
+2017-09-08T11:44:52.454+0000	writing node-cost.items to 
+2017-09-08T11:44:52.454+0000	writing node-cost.balances to 
+2017-09-08T11:44:52.455+0000	writing node-cost.users to 
+2017-09-08T11:44:52.455+0000	writing node-cost.groups to 
+2017-09-08T11:44:52.456+0000	done dumping node-cost.balances (25 documents)
+2017-09-08T11:44:52.456+0000	writing node-cost.storage to 
+2017-09-08T11:44:52.457+0000	done dumping node-cost.users (2 documents)
+2017-09-08T11:44:52.472+0000	done dumping node-cost.groups (1 document)
+2017-09-08T11:44:52.472+0000	done dumping node-cost.storage (1 document)
+2017-09-08T11:44:52.477+0000	done dumping node-cost.items (2749 documents)
+tar: Removing leading `/' from member names
+2017-09-09T11:44:52.519+0000	writing node-cost.items to 
+2017-09-09T11:44:52.519+0000	writing node-cost.balances to 
+2017-09-09T11:44:52.519+0000	writing node-cost.users to 
+2017-09-09T11:44:52.520+0000	writing node-cost.groups to 
+2017-09-09T11:44:52.521+0000	done dumping node-cost.balances (25 documents)
+2017-09-09T11:44:52.521+0000	writing node-cost.storage to 
+2017-09-09T11:44:52.538+0000	done dumping node-cost.groups (1 document)
+2017-09-09T11:44:52.538+0000	done dumping node-cost.users (2 documents)
+2017-09-09T11:44:52.538+0000	done dumping node-cost.storage (1 document)
+2017-09-09T11:44:52.546+0000	done dumping node-cost.items (2758 documents)
+tar: Removing leading `/' from member names
+2017-09-10T11:44:52.591+0000	writing node-cost.items to 
+2017-09-10T11:44:52.591+0000	writing node-cost.balances to 
+2017-09-10T11:44:52.591+0000	writing node-cost.users to 
+2017-09-10T11:44:52.591+0000	writing node-cost.groups to 
+2017-09-10T11:44:52.598+0000	done dumping node-cost.balances (25 documents)
+2017-09-10T11:44:52.599+0000	writing node-cost.storage to 
+2017-09-10T11:44:52.599+0000	done dumping node-cost.users (2 documents)
+2017-09-10T11:44:52.600+0000	done dumping node-cost.groups (1 document)
+2017-09-10T11:44:52.600+0000	done dumping node-cost.storage (1 document)
+2017-09-10T11:44:52.618+0000	done dumping node-cost.items (2761 documents)
+tar: Removing leading `/' from member names
+2017-09-11T11:44:52.674+0000	writing node-cost.balances to 
+2017-09-11T11:44:52.676+0000	writing node-cost.users to 
+2017-09-11T11:44:52.676+0000	writing node-cost.groups to 
+2017-09-11T11:44:52.676+0000	writing node-cost.items to 
+2017-09-11T11:44:52.678+0000	done dumping node-cost.balances (25 documents)
+2017-09-11T11:44:52.678+0000	writing node-cost.storage to 
+2017-09-11T11:44:52.678+0000	done dumping node-cost.users (2 documents)
+2017-09-11T11:44:52.678+0000	done dumping node-cost.storage (1 document)
+2017-09-11T11:44:52.682+0000	done dumping node-cost.groups (1 document)
+2017-09-11T11:44:52.703+0000	done dumping node-cost.items (2762 documents)
+tar: Removing leading `/' from member names
+2017-09-12T11:44:52.747+0000	writing node-cost.items to 
+2017-09-12T11:44:52.748+0000	writing node-cost.balances to 
+2017-09-12T11:44:52.748+0000	writing node-cost.users to 
+2017-09-12T11:44:52.748+0000	writing node-cost.groups to 
+2017-09-12T11:44:52.752+0000	done dumping node-cost.balances (25 documents)
+2017-09-12T11:44:52.752+0000	writing node-cost.storage to 
+2017-09-12T11:44:52.753+0000	done dumping node-cost.groups (1 document)
+2017-09-12T11:44:52.753+0000	done dumping node-cost.users (2 documents)
+2017-09-12T11:44:52.762+0000	done dumping node-cost.storage (1 document)
+2017-09-12T11:44:52.773+0000	done dumping node-cost.items (2767 documents)
+tar: Removing leading `/' from member names
+2017-09-13T11:44:52.814+0000	writing node-cost.items to 
+2017-09-13T11:44:52.815+0000	writing node-cost.balances to 
+2017-09-13T11:44:52.815+0000	writing node-cost.users to 
+2017-09-13T11:44:52.815+0000	writing node-cost.groups to 
+2017-09-13T11:44:52.816+0000	done dumping node-cost.balances (25 documents)
+2017-09-13T11:44:52.817+0000	writing node-cost.storage to 
+2017-09-13T11:44:52.829+0000	done dumping node-cost.groups (1 document)
+2017-09-13T11:44:52.829+0000	done dumping node-cost.users (2 documents)
+2017-09-13T11:44:52.829+0000	done dumping node-cost.storage (1 document)
+2017-09-13T11:44:52.840+0000	done dumping node-cost.items (2771 documents)
+tar: Removing leading `/' from member names
+2017-09-14T11:44:52.883+0000	writing node-cost.items to 
+2017-09-14T11:44:52.883+0000	writing node-cost.balances to 
+2017-09-14T11:44:52.883+0000	writing node-cost.users to 
+2017-09-14T11:44:52.883+0000	writing node-cost.groups to 
+2017-09-14T11:44:52.886+0000	done dumping node-cost.balances (25 documents)
+2017-09-14T11:44:52.886+0000	writing node-cost.storage to 
+2017-09-14T11:44:52.886+0000	done dumping node-cost.groups (1 document)
+2017-09-14T11:44:52.886+0000	done dumping node-cost.users (2 documents)
+2017-09-14T11:44:52.898+0000	done dumping node-cost.storage (1 document)
+2017-09-14T11:44:52.908+0000	done dumping node-cost.items (2777 documents)
+tar: Removing leading `/' from member names
+2017-09-15T11:44:52.964+0000	writing node-cost.items to 
+2017-09-15T11:44:52.965+0000	writing node-cost.balances to 
+2017-09-15T11:44:52.965+0000	writing node-cost.users to 
+2017-09-15T11:44:52.965+0000	writing node-cost.groups to 
+2017-09-15T11:44:52.967+0000	done dumping node-cost.groups (1 document)
+2017-09-15T11:44:52.967+0000	writing node-cost.storage to 
+2017-09-15T11:44:52.969+0000	done dumping node-cost.users (2 documents)
+2017-09-15T11:44:52.969+0000	done dumping node-cost.balances (25 documents)
+2017-09-15T11:44:52.969+0000	done dumping node-cost.storage (1 document)
+2017-09-15T11:44:52.987+0000	done dumping node-cost.items (2782 documents)
+tar: Removing leading `/' from member names
+2017-09-16T11:44:53.036+0000	writing node-cost.items to 
+2017-09-16T11:44:53.036+0000	writing node-cost.balances to 
+2017-09-16T11:44:53.036+0000	writing node-cost.users to 
+2017-09-16T11:44:53.037+0000	writing node-cost.groups to 
+2017-09-16T11:44:53.038+0000	done dumping node-cost.users (2 documents)
+2017-09-16T11:44:53.038+0000	writing node-cost.storage to 
+2017-09-16T11:44:53.040+0000	done dumping node-cost.groups (1 document)
+2017-09-16T11:44:53.040+0000	done dumping node-cost.storage (1 document)
+2017-09-16T11:44:53.054+0000	done dumping node-cost.balances (25 documents)
+2017-09-16T11:44:53.062+0000	done dumping node-cost.items (2784 documents)
+tar: Removing leading `/' from member names
+2017-09-17T11:44:53.108+0000	writing node-cost.items to 
+2017-09-17T11:44:53.109+0000	writing node-cost.balances to 
+2017-09-17T11:44:53.109+0000	writing node-cost.users to 
+2017-09-17T11:44:53.109+0000	writing node-cost.groups to 
+2017-09-17T11:44:53.112+0000	done dumping node-cost.balances (25 documents)
+2017-09-17T11:44:53.112+0000	writing node-cost.storage to 
+2017-09-17T11:44:53.119+0000	done dumping node-cost.users (2 documents)
+2017-09-17T11:44:53.120+0000	done dumping node-cost.storage (1 document)
+2017-09-17T11:44:53.120+0000	done dumping node-cost.groups (1 document)
+2017-09-17T11:44:53.140+0000	done dumping node-cost.items (2787 documents)
+tar: Removing leading `/' from member names
+2017-09-18T11:44:53.189+0000	writing node-cost.items to 
+2017-09-18T11:44:53.190+0000	writing node-cost.balances to 
+2017-09-18T11:44:53.190+0000	writing node-cost.users to 
+2017-09-18T11:44:53.192+0000	done dumping node-cost.balances (25 documents)
+2017-09-18T11:44:53.192+0000	writing node-cost.groups to 
+2017-09-18T11:44:53.192+0000	writing node-cost.storage to 
+2017-09-18T11:44:53.198+0000	done dumping node-cost.groups (1 document)
+2017-09-18T11:44:53.198+0000	done dumping node-cost.users (2 documents)
+2017-09-18T11:44:53.199+0000	done dumping node-cost.storage (1 document)
+2017-09-18T11:44:53.216+0000	done dumping node-cost.items (2789 documents)
+tar: Removing leading `/' from member names
+2017-09-19T11:44:53.257+0000	writing node-cost.items to 
+2017-09-19T11:44:53.258+0000	writing node-cost.balances to 
+2017-09-19T11:44:53.258+0000	writing node-cost.users to 
+2017-09-19T11:44:53.258+0000	writing node-cost.groups to 
+2017-09-19T11:44:53.259+0000	done dumping node-cost.balances (25 documents)
+2017-09-19T11:44:53.259+0000	writing node-cost.storage to 
+2017-09-19T11:44:53.261+0000	done dumping node-cost.storage (1 document)
+2017-09-19T11:44:53.262+0000	done dumping node-cost.users (2 documents)
+2017-09-19T11:44:53.262+0000	done dumping node-cost.groups (1 document)
+2017-09-19T11:44:53.281+0000	done dumping node-cost.items (2796 documents)
+tar: Removing leading `/' from member names
+2017-09-20T11:44:53.336+0000	writing node-cost.items to 
+2017-09-20T11:44:53.337+0000	writing node-cost.groups to 
+2017-09-20T11:44:53.337+0000	writing node-cost.balances to 
+2017-09-20T11:44:53.338+0000	writing node-cost.users to 
+2017-09-20T11:44:53.344+0000	done dumping node-cost.groups (1 document)
+2017-09-20T11:44:53.344+0000	writing node-cost.storage to 
+2017-09-20T11:44:53.350+0000	done dumping node-cost.storage (1 document)
+2017-09-20T11:44:53.354+0000	done dumping node-cost.balances (25 documents)
+2017-09-20T11:44:53.354+0000	done dumping node-cost.users (2 documents)
+2017-09-20T11:44:53.369+0000	done dumping node-cost.items (2806 documents)
+tar: Removing leading `/' from member names
+2017-09-21T11:44:53.426+0000	writing node-cost.items to 
+2017-09-21T11:44:53.426+0000	writing node-cost.balances to 
+2017-09-21T11:44:53.427+0000	writing node-cost.users to 
+2017-09-21T11:44:53.427+0000	writing node-cost.groups to 
+2017-09-21T11:44:53.429+0000	done dumping node-cost.balances (25 documents)
+2017-09-21T11:44:53.429+0000	writing node-cost.storage to 
+2017-09-21T11:44:53.431+0000	done dumping node-cost.users (2 documents)
+2017-09-21T11:44:53.434+0000	done dumping node-cost.storage (1 document)
+2017-09-21T11:44:53.435+0000	done dumping node-cost.groups (1 document)
+2017-09-21T11:44:53.457+0000	done dumping node-cost.items (2810 documents)
+tar: Removing leading `/' from member names
+2017-09-22T11:44:53.527+0000	writing node-cost.balances to 
+2017-09-22T11:44:53.527+0000	writing node-cost.users to 
+2017-09-22T11:44:53.527+0000	writing node-cost.items to 
+2017-09-22T11:44:53.528+0000	writing node-cost.groups to 
+2017-09-22T11:44:53.529+0000	done dumping node-cost.balances (25 documents)
+2017-09-22T11:44:53.529+0000	writing node-cost.storage to 
+2017-09-22T11:44:53.530+0000	done dumping node-cost.storage (1 document)
+2017-09-22T11:44:53.530+0000	done dumping node-cost.users (2 documents)
+2017-09-22T11:44:53.534+0000	done dumping node-cost.groups (1 document)
+2017-09-22T11:44:53.565+0000	done dumping node-cost.items (2814 documents)
+tar: Removing leading `/' from member names
+2017-09-23T11:44:53.616+0000	writing node-cost.items to 
+2017-09-23T11:44:53.617+0000	writing node-cost.balances to 
+2017-09-23T11:44:53.617+0000	writing node-cost.users to 
+2017-09-23T11:44:53.617+0000	writing node-cost.groups to 
+2017-09-23T11:44:53.621+0000	done dumping node-cost.groups (1 document)
+2017-09-23T11:44:53.621+0000	writing node-cost.storage to 
+2017-09-23T11:44:53.622+0000	done dumping node-cost.users (2 documents)
+2017-09-23T11:44:53.623+0000	done dumping node-cost.balances (25 documents)
+2017-09-23T11:44:53.628+0000	done dumping node-cost.storage (1 document)
+2017-09-23T11:44:53.651+0000	done dumping node-cost.items (2815 documents)
+tar: Removing leading `/' from member names
+2017-09-24T11:44:53.693+0000	writing node-cost.balances to 
+2017-09-24T11:44:53.693+0000	writing node-cost.users to 
+2017-09-24T11:44:53.693+0000	writing node-cost.items to 
+2017-09-24T11:44:53.694+0000	writing node-cost.groups to 
+2017-09-24T11:44:53.694+0000	done dumping node-cost.users (2 documents)
+2017-09-24T11:44:53.694+0000	done dumping node-cost.balances (25 documents)
+2017-09-24T11:44:53.694+0000	writing node-cost.storage to 
+2017-09-24T11:44:53.695+0000	done dumping node-cost.storage (1 document)
+2017-09-24T11:44:53.697+0000	done dumping node-cost.groups (1 document)
+2017-09-24T11:44:53.717+0000	done dumping node-cost.items (2819 documents)
+tar: Removing leading `/' from member names
+2017-09-25T11:44:53.769+0000	writing node-cost.items to 
+2017-09-25T11:44:53.771+0000	writing node-cost.balances to 
+2017-09-25T11:44:53.771+0000	writing node-cost.users to 
+2017-09-25T11:44:53.771+0000	writing node-cost.groups to 
+2017-09-25T11:44:53.772+0000	done dumping node-cost.balances (25 documents)
+2017-09-25T11:44:53.772+0000	writing node-cost.storage to 
+2017-09-25T11:44:53.773+0000	done dumping node-cost.storage (1 document)
+2017-09-25T11:44:53.778+0000	done dumping node-cost.users (2 documents)
+2017-09-25T11:44:53.779+0000	done dumping node-cost.groups (1 document)
+2017-09-25T11:44:53.797+0000	done dumping node-cost.items (2821 documents)
+tar: Removing leading `/' from member names
+2017-09-26T11:44:53.846+0000	writing node-cost.items to 
+2017-09-26T11:44:53.846+0000	writing node-cost.users to 
+2017-09-26T11:44:53.846+0000	writing node-cost.balances to 
+2017-09-26T11:44:53.847+0000	writing node-cost.groups to 
+2017-09-26T11:44:53.847+0000	done dumping node-cost.users (2 documents)
+2017-09-26T11:44:53.847+0000	writing node-cost.storage to 
+2017-09-26T11:44:53.848+0000	done dumping node-cost.storage (1 document)
+2017-09-26T11:44:53.848+0000	done dumping node-cost.groups (1 document)
+2017-09-26T11:44:53.849+0000	done dumping node-cost.balances (25 documents)
+2017-09-26T11:44:53.870+0000	done dumping node-cost.items (2825 documents)
+tar: Removing leading `/' from member names
+2017-09-27T11:44:53.921+0000	writing node-cost.items to 
+2017-09-27T11:44:53.922+0000	writing node-cost.balances to 
+2017-09-27T11:44:53.922+0000	writing node-cost.users to 
+2017-09-27T11:44:53.923+0000	writing node-cost.groups to 
+2017-09-27T11:44:53.924+0000	done dumping node-cost.balances (25 documents)
+2017-09-27T11:44:53.924+0000	writing node-cost.storage to 
+2017-09-27T11:44:53.928+0000	done dumping node-cost.groups (1 document)
+2017-09-27T11:44:53.939+0000	done dumping node-cost.storage (1 document)
+2017-09-27T11:44:53.939+0000	done dumping node-cost.users (2 documents)
+2017-09-27T11:44:53.952+0000	done dumping node-cost.items (2828 documents)
+tar: Removing leading `/' from member names
+2017-09-28T11:44:54.000+0000	writing node-cost.items to 
+2017-09-28T11:44:54.000+0000	writing node-cost.users to 
+2017-09-28T11:44:54.000+0000	writing node-cost.groups to 
+2017-09-28T11:44:54.001+0000	writing node-cost.balances to 
+2017-09-28T11:44:54.002+0000	done dumping node-cost.users (2 documents)
+2017-09-28T11:44:54.002+0000	writing node-cost.storage to 
+2017-09-28T11:44:54.010+0000	done dumping node-cost.balances (25 documents)
+2017-09-28T11:44:54.010+0000	done dumping node-cost.groups (1 document)
+2017-09-28T11:44:54.011+0000	done dumping node-cost.storage (1 document)
+2017-09-28T11:44:54.043+0000	done dumping node-cost.items (2832 documents)
+tar: Removing leading `/' from member names
+2017-09-29T11:44:54.090+0000	writing node-cost.items to 
+2017-09-29T11:44:54.090+0000	writing node-cost.balances to 
+2017-09-29T11:44:54.090+0000	writing node-cost.users to 
+2017-09-29T11:44:54.091+0000	writing node-cost.groups to 
+2017-09-29T11:44:54.092+0000	done dumping node-cost.balances (25 documents)
+2017-09-29T11:44:54.092+0000	writing node-cost.storage to 
+2017-09-29T11:44:54.101+0000	done dumping node-cost.groups (1 document)
+2017-09-29T11:44:54.101+0000	done dumping node-cost.users (2 documents)
+2017-09-29T11:44:54.102+0000	done dumping node-cost.storage (1 document)
+2017-09-29T11:44:54.116+0000	done dumping node-cost.items (2841 documents)
+tar: Removing leading `/' from member names
+2017-09-30T11:44:54.164+0000	writing node-cost.items to 
+2017-09-30T11:44:54.164+0000	writing node-cost.balances to 
+2017-09-30T11:44:54.164+0000	writing node-cost.users to 
+2017-09-30T11:44:54.165+0000	writing node-cost.groups to 
+2017-09-30T11:44:54.167+0000	done dumping node-cost.balances (25 documents)
+2017-09-30T11:44:54.167+0000	writing node-cost.storage to 
+2017-09-30T11:44:54.169+0000	done dumping node-cost.storage (1 document)
+2017-09-30T11:44:54.169+0000	done dumping node-cost.users (2 documents)
+2017-09-30T11:44:54.169+0000	done dumping node-cost.groups (1 document)
+2017-09-30T11:44:54.189+0000	done dumping node-cost.items (2844 documents)
+tar: Removing leading `/' from member names
+2017-10-01T11:44:54.247+0000	writing node-cost.items to 
+2017-10-01T11:44:54.247+0000	writing node-cost.groups to 
+2017-10-01T11:44:54.247+0000	writing node-cost.balances to 
+2017-10-01T11:44:54.250+0000	done dumping node-cost.groups (1 document)
+2017-10-01T11:44:54.250+0000	writing node-cost.storage to 
+2017-10-01T11:44:54.250+0000	writing node-cost.users to 
+2017-10-01T11:44:54.253+0000	done dumping node-cost.storage (1 document)
+2017-10-01T11:44:54.254+0000	done dumping node-cost.balances (26 documents)
+2017-10-01T11:44:54.255+0000	done dumping node-cost.users (2 documents)
+2017-10-01T11:44:54.281+0000	done dumping node-cost.items (2849 documents)
+tar: Removing leading `/' from member names
+2017-10-02T11:44:54.338+0000	writing node-cost.items to 
+2017-10-02T11:44:54.338+0000	writing node-cost.balances to 
+2017-10-02T11:44:54.339+0000	writing node-cost.users to 
+2017-10-02T11:44:54.339+0000	writing node-cost.groups to 
+2017-10-02T11:44:54.341+0000	done dumping node-cost.balances (26 documents)
+2017-10-02T11:44:54.341+0000	writing node-cost.storage to 
+2017-10-02T11:44:54.342+0000	done dumping node-cost.storage (1 document)
+2017-10-02T11:44:54.350+0000	done dumping node-cost.users (2 documents)
+2017-10-02T11:44:54.350+0000	done dumping node-cost.groups (1 document)
+2017-10-02T11:44:54.372+0000	done dumping node-cost.items (2852 documents)
+tar: Removing leading `/' from member names
+2017-10-03T11:44:54.427+0000	writing node-cost.items to 
+2017-10-03T11:44:54.427+0000	writing node-cost.balances to 
+2017-10-03T11:44:54.427+0000	writing node-cost.users to 
+2017-10-03T11:44:54.427+0000	writing node-cost.groups to 
+2017-10-03T11:44:54.430+0000	done dumping node-cost.groups (1 document)
+2017-10-03T11:44:54.430+0000	writing node-cost.storage to 
+2017-10-03T11:44:54.430+0000	done dumping node-cost.users (2 documents)
+2017-10-03T11:44:54.432+0000	done dumping node-cost.storage (1 document)
+2017-10-03T11:44:54.443+0000	done dumping node-cost.balances (26 documents)
+2017-10-03T11:44:54.453+0000	done dumping node-cost.items (2859 documents)
+tar: Removing leading `/' from member names

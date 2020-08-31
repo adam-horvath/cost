@@ -1,0 +1,1 @@
+./myCron.sh > "../log/cron.txt" 2> "../log/cron.err" &

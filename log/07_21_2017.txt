@@ -1,0 +1,75 @@
+App started on http://localhost:8080
+[0mPOST /api/v1/main [32m200 [0m125.327 ms - 481[0m
+[0mPOST /api/v1/main [32m200 [0m56.194 ms - 481[0m
+[0mPOST /api/v1/main [32m200 [0m56.277 ms - 481[0m
+[0mPOST /api/v1/main [32m200 [0m78.598 ms - 2648[0m
+[0mPOST /api/v1/main [32m200 [0m46.961 ms - 2724[0m
+[0mPOST /api/v1/main [32m200 [0m38.287 ms - 481[0m
+5024
+[0mPOST /api/v1/item [32m200 [0m56.884 ms - 41[0m
+[0mPOST /api/v1/main [32m200 [0m66.074 ms - 715[0m
+[0mPOST /api/v1/main [32m200 [0m30.442 ms - 715[0m
+[0mPOST /api/v1/main [32m200 [0m32.144 ms - 52[0m
+[0mPOST /api/v1/main [32m200 [0m41.150 ms - 1628[0m
+[0mPOST /api/v1/main [32m200 [0m38.762 ms - 52[0m
+[0mPOST /api/v1/main [32m200 [0m24.825 ms - 1628[0m
+[0mPOST /api/v1/main [32m200 [0m45.055 ms - 52[0m
+[0mPOST /api/v1/main [32m200 [0m27.221 ms - 1628[0m
+[0mPOST /api/v1/main [32m200 [0m23.701 ms - 52[0m
+[0mPOST /api/v1/main [32m200 [0m28.246 ms - 1628[0m
+[0mPOST /api/v1/main [32m200 [0m31.580 ms - 52[0m
+[0mPOST /api/v1/main [32m200 [0m21.746 ms - 715[0m
+[0mPOST /api/v1/stats [32m200 [0m26.088 ms - 242[0m
+[0mPOST /api/v1/main [32m200 [0m22.750 ms - 715[0m
+[0mPOST /api/v1/main [32m200 [0m33.304 ms - 715[0m
+5024
+[0mPOST /api/v1/item [32m200 [0m23.799 ms - 41[0m
+[0mPOST /api/v1/main [32m200 [0m31.093 ms - 940[0m
+[0mPOST /api/v1/main [32m200 [0m36.017 ms - 940[0m
+[0mPOST /api/v1/main [32m200 [0m38.709 ms - 940[0m
+5024
+[0mPOST /api/v1/item [32m200 [0m12.275 ms - 41[0m
+[0mPOST /api/v1/main [32m200 [0m32.600 ms - 1141[0m
+5019
+[0mPUT /api/v1/item [32m200 [0m12.292 ms - 75[0m
+[0mPOST /api/v1/main [32m200 [0m25.981 ms - 1169[0m
+[0mPOST /api/v1/main [32m200 [0m44.395 ms - 52[0m
+[0mPOST /api/v1/main [32m200 [0m40.845 ms - 1628[0m
+[0mPOST /api/v1/main [32m200 [0m61.878 ms - 1133[0m
+5019
+[0mPUT /api/v1/item [32m200 [0m33.481 ms - 75[0m
+[0mPOST /api/v1/main [32m200 [0m28.299 ms - 1161[0m
+[0mPOST /api/v1/main [32m200 [0m34.855 ms - 1740[0m
+[0mPOST /api/v1/main [32m200 [0m65.866 ms - 703[0m
+5019
+[0mPUT /api/v1/item [32m200 [0m17.312 ms - 75[0m
+[0mPOST /api/v1/main [32m200 [0m33.561 ms - 731[0m
+[0mPOST /api/v1/main [32m200 [0m30.691 ms - 1740[0m
+[0mPOST /api/v1/main [32m200 [0m41.832 ms - 1161[0m
+[0mPOST /api/v1/main [32m200 [0m54.038 ms - 1628[0m
+[0mPOST /api/v1/main [32m200 [0m39.021 ms - 52[0m
+[0mPOST /api/v1/main [32m200 [0m40.576 ms - 1169[0m
+[0mPOST /api/v1/main [32m200 [0m22.450 ms - 1169[0m
+2013
+[0mPOST /api/login [32m200 [0m176.747 ms - 459[0m
+[0mPOST /api/v1/main [32m200 [0m21.801 ms - 1169[0m
+[0mPOST /api/v1/main [32m200 [0m25.334 ms - 52[0m
+300177
+[0mGET /api/v1/archive [32m200 [0m2005.903 ms - 56[0m
+[0mPOST /api/v1/stats [32m200 [0m38.545 ms - 239[0m
+[0mPOST /api/v1/main [32m200 [0m34.833 ms - 52[0m
+[0mPOST /api/v1/main [32m200 [0m51.465 ms - 52[0m
+300177
+[0mGET /api/v1/archive [32m200 [0m1298.331 ms - 56[0m
+[0mPOST /api/v1/main [32m200 [0m43.862 ms - 52[0m
+[0mPOST /api/v1/main [32m200 [0m58.079 ms - 1169[0m
+[0mPOST /api/v1/main [32m200 [0m32.401 ms - 52[0m
+[0mPOST /api/v1/stats [32m200 [0m29.348 ms - 239[0m
+[0mPOST /api/v1/stats [32m200 [0m28.141 ms - 239[0m
+[0mPOST /api/v1/stats [32m200 [0m28.981 ms - 239[0m
+[0mPOST /api/v1/stats [32m200 [0m22.519 ms - 239[0m
+[0mPOST /api/v1/main [32m200 [0m40.113 ms - 52[0m
+[0mPOST /api/v1/main [32m200 [0m32.202 ms - 52[0m
+[0mPOST /api/v1/main [32m200 [0m35.271 ms - 1169[0m
+[0mPOST /api/v1/main [32m200 [0m52.988 ms - 52[0m
+[0mPOST /api/v1/main [32m200 [0m40.799 ms - 52[0m
