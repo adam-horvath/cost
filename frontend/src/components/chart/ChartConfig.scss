@@ -1,0 +1,51 @@
+@import "../../colors/Colors";
+
+.chart-container {
+  .button-group {
+    height: 50px;
+    .button-group-item {
+      background: white;
+      color: $cost-blue;
+      border: 2px solid $cost-blue;
+      border-radius: 0;
+      border-right: 0;
+      z-index: 0;
+      height: 100%;
+      font-size: 20px;
+      &:last-child {
+        border-right: 2px solid $cost-blue;
+      }
+      &.active {
+        color: white;
+        background: $cost-blue;
+      }
+    }
+  }
+  .interval-container {
+    .dropdown-container {
+      &.year {
+        padding: 0 5px 0 0;
+      }
+      &.month, &.type {
+        padding: 0 0 0 5px;
+      }
+      &.full-sized {
+        padding: 0;
+      }
+      .dropdown {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .button-container {
+    .btn {
+      width: 100%;
+      border-radius: 0;
+      border: 0;
+      height: 50px;
+      font-size: 20px;
+      color: white;
+      background-color: $cost-blue;
+    }
+  }
+}

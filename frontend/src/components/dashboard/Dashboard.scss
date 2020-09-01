@@ -1,0 +1,73 @@
+@import "../../colors/Colors";
+
+.cost {
+  .dashboard {
+    > div {
+      .add-cost-container {
+        margin-right: 5px;
+      }
+      .add-income-container {
+        margin-left: 5px;
+      }
+    }
+
+    .balance {
+      text-align: center;
+      background: $light-gray;
+      padding: 20px;
+    }
+
+    .add-item-container {
+      display: flex;
+      position: relative;
+      > div {
+        width: 50%;
+      }
+      .add-container {
+        background: $cost-blue;
+        padding: 20px;
+        cursor: pointer;
+        .add-icon {
+          width: 35px;
+          height: 28px;
+          background-size: cover !important;
+        }
+        .add-label {
+          width: 100%;
+          color: white;
+        }
+      }
+      .add-cost-container {
+        display: flex;
+        .add-cost-icon {
+          background: url("../../assets/ic_remove_circle_outline_white_48px.svg")
+            no-repeat center center;
+        }
+        .add-cost-label {
+          text-align: right;
+        }
+      }
+      .add-income-container {
+        display: flex;
+        float: right;
+        .add-income-icon {
+          background: url("../../assets/ic_add_circle_outline_white_48px.svg")
+            no-repeat center center;
+        }
+        .add-income-label {
+          text-align: left;
+        }
+      }
+    }
+    @media screen and (min-width: 768px) {
+      .date-picker-container .react-datepicker-popper[data-placement^="top"] {
+        margin-bottom: 19px;
+      }
+    }
+    @media screen and (max-width: 767.999999px) {
+      .date-picker-container .react-datepicker-popper[data-placement^="top"] {
+        margin-bottom: -50px;
+      }
+    }
+  }
+}

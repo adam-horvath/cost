@@ -1,0 +1,47 @@
+@import "../../colors/Colors";
+
+.cost {
+  header {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 768px) {
+    .menu {
+      box-shadow: rgba(0, 0, 0, 0.4) 0 6px 4px;
+    }
+  }
+  .menu {
+    background: $cost-blue;
+    margin: 0;
+    @media screen and (min-width: 768px) {
+      .entry-container {
+        height: 44px;
+        border: 2px solid white;
+        border-right: 0;
+        &:first-child {
+          border-left: 0;
+        }
+      }
+    }
+    @media screen and (max-width: 767.999999px) {
+      .entry-container {
+        display: none;
+      }
+    }
+    .entry-container {
+      padding: 0;
+      &:hover {
+        text-decoration: underline;
+      }
+      .menu-entry {
+        color: white;
+        background: $cost-blue;
+        height: 40px;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        display: inline-table;
+      }
+    }
+  }
+}

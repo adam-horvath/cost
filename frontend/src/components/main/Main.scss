@@ -1,0 +1,53 @@
+@import "../../colors/Colors";
+
+.cost {
+  div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  a,
+  button {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .cost-label {
+    font-size: 14px !important;
+    margin-bottom: 0 !important;
+  }
+  text-align: left;
+  margin: 0;
+  line-height: 1.4;
+  header {
+    div {
+      overflow: hidden;
+    }
+  }
+  //main div
+  > div:nth-child(2) {
+    padding: 30px 20px 20px;
+    > div {
+      color: $cost-blue;
+      font-size: 20px;
+      margin: 0 auto 10px;
+    }
+    @media screen and (min-width: 480px) {
+      > div {
+        width: 80%;
+      }
+    }
+    @media screen and (max-width: 479.999999px) {
+      > div {
+        width: 100%;
+      }
+    }
+  }
+  // number input
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}

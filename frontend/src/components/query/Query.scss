@@ -1,0 +1,151 @@
+@import "../../colors/Colors";
+
+.query {
+  > div {
+    > div {
+      color: #3f51b5;
+      font-size: 20px;
+      margin: 0 auto 10px;
+    }
+  }
+  .dropdown {
+    margin-bottom: 0;
+    button {
+      border: 2px solid $cost-blue !important;
+    }
+  }
+  .category {
+    width: 100%;
+    .category-toggle-container {
+      display: flex;
+      .negate {
+        width: 15%;
+        min-width: 100px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .description-container-panel {
+    display: flex;
+    .description-container {
+      width: 50%;
+      margin-right: 5px;
+      .description {
+        height: 50px;
+        width: 100%;
+        border: 2px solid $cost-blue;
+        color: $cost-blue;
+        padding-left: 10px;
+        font-size: 18px;
+      }
+    }
+    .full-match-container {
+      width: 50%;
+      margin-left: 5px;
+    }
+  }
+  .amount-container {
+    display: flex;
+    > div {
+      width: 50%;
+    }
+    .minimal-amount-container {
+      margin-right: 5px;
+    }
+    .maximal-amount-container {
+      margin-left: 5px;
+    }
+    .amount {
+      height: 50px;
+      width: 100%;
+      border: 2px solid $cost-blue;
+      color: $cost-blue;
+      padding-left: 10px;
+      font-size: 18px;
+    }
+  }
+  .date-container {
+    display: flex;
+    > div {
+      width: 50%;
+    }
+    .minimal-date-container {
+      margin-right: 5px;
+    }
+    .maximal-date-container {
+      margin-left: 5px;
+    }
+    .date-picker-container {
+      padding: 1px 10px;
+      height: 50px;
+      position: relative;
+      .react-datepicker-popper[data-placement^="bottom"] {
+        margin-top: 10px;
+      }
+      .react-datepicker-popper[data-placement^="top"] {
+        margin-bottom: 10px;
+      }
+      .close-icon {
+        position: absolute;
+        background: url("../../assets/cross.png") no-repeat center center;
+        background-size: cover;
+        top: 18px;
+        right: 18px;
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+      }
+      @media screen and (max-width: 575.999999px) {
+        input {
+          text-align: left;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 479.999999px) {
+    .date-container {
+      display: block;
+      margin-bottom: 30px;
+      > div {
+        width: 100%;
+      }
+      .minimal-date-container {
+        margin-right: 0;
+      }
+      .maximal-date-container {
+        margin-left: 0;
+      }
+    }
+  }
+  @media screen and (min-width: 480px) {
+    .date-container {
+      margin-bottom: 20px;
+    }
+  }
+  .btn {
+    border-radius: 0;
+    border: 2px solid $cost-blue;
+    height: 50px;
+    font-size: 20px;
+  }
+  .btn-primary {
+    color: white;
+    background: $cost-blue;
+    width: calc(50% - 5px);
+    &.query-sum {
+      margin-right: 5px;
+    }
+    &.query-list {
+      margin-left: 5px;
+    }
+  }
+  .result-container {
+    .result {
+      color: white;
+      background-color: $cost-blue;
+      height: 50px;
+      padding: 10px;
+      text-align: center;
+    }
+  }
+}

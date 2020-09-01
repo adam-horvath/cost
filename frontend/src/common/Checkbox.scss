@@ -1,0 +1,52 @@
+@import "../colors/Colors";
+
+.checkbox-container {
+  display: block;
+  .checkbox-parent {
+    padding: 0;
+    display: flex;
+    .checkbox {
+      height: 50px;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      label {
+        font-size: 16px;
+        line-height: 1;
+        padding: 16px 36px;
+        &:first-child {
+          padding: 16px 4px 16px 36px;
+        }
+        input {
+          visibility: hidden;
+        }
+        .tick {
+          position: absolute;
+          left: 8px;
+          width: 16px;
+          height: 16px;
+          border: 2px solid $cost-blue;
+          &.checked {
+            background: url("../assets/tick.png") no-repeat center center;
+            background-size: cover;
+          }
+        }
+      }
+    }
+    .sumbox-container {
+      display: flex;
+      span {
+        padding: 16px 0;
+        font-size: 16px;
+        line-height: 1;
+      }
+      .sumbox {
+        width: 28px;
+        margin: 0 0 0 -4px;
+        label {
+          margin: 0 -14px 0 0px;
+        }
+      }
+    }
+  }
+}

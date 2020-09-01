@@ -1,0 +1,146 @@
+@import "../colors/Colors";
+
+.modal-container {
+  position: relative;
+}
+
+.modal-container .modal,
+.modal-container .modal-backdrop {
+  position: absolute;
+}
+
+.modal-header {
+  background: $cost-blue;
+  color: white;
+  padding: 20px;
+  position: relative;
+  h4 {
+    font-size: 20px;
+  }
+  .delete-icon {
+    position: absolute;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    background: url("../assets/ic_delete_white_48px.svg") no-repeat center
+      center;
+    margin: 20px;
+    top: 0;
+    background-size: cover;
+    cursor: pointer;
+  }
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-body {
+  padding: 20px;
+  .label {
+    color: $cost-blue;
+    display: block;
+    text-align: left;
+    border-radius: 0;
+    padding: 5px 0;
+    font-size: 14px;
+  }
+  input {
+    border: 2px solid $cost-blue;
+    width: 100%;
+    height: 50px;
+    color: $cost-blue;
+    padding-left: 10px;
+    font-size: 18px;
+    &.amount, &.description {
+      margin-bottom: 20px;
+    }
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+.modal-footer {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid $cost-blue;
+  .btn {
+    border-radius: 0;
+    width: calc(50% - 5px);
+    border: 2px solid $cost-blue;
+    height: 50px;
+    font-size: 16px;
+  }
+  .btn-default {
+    color: $cost-blue;
+    background: $light-gray;
+  }
+  .btn-primary {
+    color: white;
+    background-color: $cost-blue !important;
+    margin-left: 10px !important;
+    border: 0 !important;
+  }
+}
+
+.confirm-modal {
+  .modal-body {
+    font-size: 18px;
+    color: $cost-blue;
+  }
+  .delete-icon {
+    cursor: default;
+  }
+}
+
+.ok-modal {
+  .modal-body {
+    font-size: 20px;
+    color: $cost-blue
+  }
+  .modal-footer {
+    .btn-primary {
+      margin-left: 0!important;
+      width: 100%;
+    }
+  }
+}
+
+.line-chart-modal, .bar-chart-modal:not(.small) {
+  width: 80vw;
+  max-width: 80vw;
+  margin: 0 auto;
+  .modal-dialog {
+    width: 100%;
+  }
+}
+
+//.bar-chart-modal {
+//  &:not(.small) {
+//    width: 80vw;
+//    max-width: 80vw;
+//    margin: 0 auto;
+//    .modal-dialog {
+//      width: 100%;
+//    }
+//  }
+//}
+
+.item-list-modal {
+  .modal-body {
+    min-height: 300px;
+    max-height: 60vh;
+    overflow-y: auto;
+    .cost-label {
+      margin-top: 20px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

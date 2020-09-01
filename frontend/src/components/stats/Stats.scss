@@ -1,0 +1,73 @@
+@import "../../colors/Colors";
+
+.cost {
+  .stats-container {
+    > div {
+      padding: 10px;
+      height: 60px;
+      background: $light-gray;
+      .stats-label {
+        position: absolute;
+        font-size: 14px;
+        color: $cost-blue;
+      }
+      .amount {
+        padding: 6px 0;
+      }
+      @media screen and (min-width: 576px) {
+        .stats-label {
+          max-width: 20%;
+        }
+        .amount {
+          text-align: center;
+        }
+      }
+      @media screen and (max-width: 575.999999px) {
+        .stats-label {
+          max-width: 40%;
+        }
+        .amount {
+          text-align: right;
+        }
+      }
+    }
+    .green-item {
+      .amount {
+        color: $cost-green;
+      }
+    }
+    .red-item {
+      .amount {
+        color: $cost-red;
+      }
+    }
+    .month-pager-container {
+      display: flex;
+      background: $cost-blue;
+      .month-pager {
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 6px 0;
+      }
+      .paginate {
+        width: 40px;
+        &.visible {
+          cursor: pointer;
+        }
+        &.left.visible {
+          background: url("../../assets/ic_chevron_left_white_48px.svg") no-repeat center center;
+        }
+        &.left {
+          margin-right: 20px;
+        }
+        &.right.visible {
+          background: url("../../assets/ic_chevron_right_white_48px.svg") no-repeat center center;
+        }
+        &.right {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
