@@ -7206,10 +7206,6 @@ webidl-conversions@^4.0.0:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
 
-webpac@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/webpac/-/webpac-1.0.1.tgz#b4d77e768e52e4ee0d10448bc2de306ac51938a4"
-
 webpack-dev-middleware@^1.11.0:
   version "1.12.2"
   resolved "https://registry.yarnpkg.com/webpack-dev-middleware/-/webpack-dev-middleware-1.12.2.tgz#f8fc1120ce3b4fc5680ceecb43d777966b21105e"
