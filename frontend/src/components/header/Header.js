@@ -32,10 +32,10 @@ class Header extends Component {
             this.props.offline.isOffline ? "always-shadow" : ""
           }`}
         >
-          <Link to="/~horvath/cost">
+          <Link to="/cost">
             <img src={logo} className="logo" alt="logo" />
           </Link>
-          <Link to="/~horvath/cost">
+          <Link to="/cost">
             <h1 className="title">Kassza</h1>
           </Link>
           {this.props.authenticated ? (

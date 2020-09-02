@@ -27,10 +27,10 @@ class Main extends Component {
             <Header authenticated={true} />
             {this.props.offline.isOffline ? null : (
               <Switch>
-                <Route path="/~horvath/cost" component={Dashboard} />
-                <Route path="/~horvath/stats" component={Stats} />
-                <Route path="/~horvath/query" component={Query} />
-                <Route path="/~horvath/chart" component={ChartConfig} />
+                <Route path="/cost" component={Dashboard} />
+                <Route path="/cost/stats" component={Stats} />
+                <Route path="/cost/query" component={Query} />
+                <Route path="/cost/chart" component={ChartConfig} />
                 <Route component={Dashboard} />
               </Switch>
             )}

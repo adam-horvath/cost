@@ -48,16 +48,16 @@ class Hamburger extends Component {
           }`}
         >
           <div className="menu-item">
-            <Link to="/~horvath/cost" onClick={this.onMenuClick}>Főoldal</Link>
+            <Link to="/cost" onClick={this.onMenuClick}>Főoldal</Link>
           </div>
           <div className="menu-item">
-            <Link to="/~horvath/stats" onClick={this.onMenuClick}>Statisztikák</Link>
+            <Link to="/cost/stats" onClick={this.onMenuClick}>Statisztikák</Link>
           </div>
           <div className="menu-item">
-            <Link to="/~horvath/query" onClick={this.onMenuClick}>Lekérdezések</Link>
+            <Link to="/cost/query" onClick={this.onMenuClick}>Lekérdezések</Link>
           </div>
           <div className="menu-item">
-            <Link to="/~horvath/chart" onClick={this.onMenuClick}>Diagramok</Link>
+            <Link to="/cost/chart" onClick={this.onMenuClick}>Diagramok</Link>
           </div>
           <div className="menu-item" onClick={this.props.logout}>
             Kijelentkezés

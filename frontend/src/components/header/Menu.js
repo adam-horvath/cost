@@ -9,22 +9,22 @@ class Menu extends Component {
     return (
       <div className="menu row">
         <div className="entry-container col-sm-3">
-          <Link to="/~horvath/cost" className="menu-entry">
+          <Link to="/cost" className="menu-entry">
             Főoldal
           </Link>
         </div>
         <div className="entry-container col-sm-3">
-          <Link to="/~horvath/stats" className="menu-entry">
+          <Link to="/cost/stats" className="menu-entry">
             Statisztikák
           </Link>
         </div>
         <div className="entry-container col-sm-3">
-          <Link to="/~horvath/query" className="menu-entry">
+          <Link to="/cost/query" className="menu-entry">
             Lekérdezések
           </Link>
         </div>
         <div className="entry-container col-sm-3">
-          <Link to="/~horvath/chart" className="menu-entry">
+          <Link to="/cost/chart" className="menu-entry">
             Diagramok
           </Link>
         </div>
