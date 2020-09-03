@@ -1,4 +1,4 @@
-import { combineReducers } from "redux";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
 import auth from "./auth";
 import dashboard from "./dashboard";
@@ -7,7 +7,7 @@ import chart from "./chart";
 import bubble from "./bubble";
 import offline from "./offline";
 
-const rootReducer = combineReducers({
+const reducer = combineReducers({
   auth,
   dashboard,
   query,
@@ -16,4 +16,8 @@ const rootReducer = combineReducers({
   offline
 });
 
-export default rootReducer;
+const store = configureStore({
+  reducer
+});
+
+export default store;

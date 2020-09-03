@@ -6,7 +6,7 @@ import { bubble, query, queryList, offline, logout } from "../../redux/actions";
 import PropTypes from "prop-types";
 import Constants from "../../common/Constants";
 import ToggleButton from "../../common/ToggleButton";
-import { DropdownButton, MenuItem, Button } from "react-bootstrap";
+import { DropdownButton, Dropdown, Button } from "react-bootstrap";
 import "../../styles/Dropdown.scss";
 import DatePicker from "react-datepicker";
 import moment from "moment-timezone";
@@ -109,9 +109,9 @@ class Query extends Component {
 
   getMenuItems = array => {
     return array.map((category, i) => (
-      <MenuItem eventKey={i} key={i} onSelect={() => this.onSelectCategory(i)}>
+      <Dropdown.Item eventKey={i} key={i} onSelect={() => this.onSelectCategory(i)}>
         {category}
-      </MenuItem>
+      </Dropdown.Item>
     ));
   };
 

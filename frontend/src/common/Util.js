@@ -1,6 +1,6 @@
 import Constants from "./Constants";
 import moment from "moment-timezone";
-import { MenuItem } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 import React from "react";
 
 class Util {
@@ -154,9 +154,9 @@ class Util {
       years.push(i);
     }
     return years.map((year, i) => (
-      <MenuItem eventKey={i} key={i} onSelect={() => onSelectYear(year)}>
+      <Dropdown.Item eventKey={i} key={i} onSelect={() => onSelectYear(year)}>
         {year}
-      </MenuItem>
+      </Dropdown.Item>
     ));
   };
 
@@ -169,9 +169,9 @@ class Util {
       )
         return null;
       return (
-        <MenuItem eventKey={i} key={i} onSelect={() => onSelectMonth(i)}>
+        <Dropdown.Item eventKey={i} key={i} onSelect={() => onSelectMonth(i)}>
           {month}
-        </MenuItem>
+        </Dropdown.Item>
       );
     });
   };
