@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../../styles/Modal.scss";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { Button, Modal, DropdownButton, MenuItem } from "react-bootstrap";
+import { Button, Modal, DropdownButton, Dropdown } from "react-bootstrap";
 import Constants from "../../common/Constants";
 import request from "../../lib/request";
 import Util from "../../common/Util";
@@ -16,9 +16,9 @@ import {bubble, logout, offline} from "../../redux/actions";
 class ItemModal extends Component {
   getMenuItems = array => {
     return array.map((category, i) => (
-      <MenuItem eventKey={i} key={i} onSelect={() => this.onSelectMenuItem(i)}>
+      <Dropdown.Item eventKey={i} key={i} onSelect={() => this.onSelectMenuItem(i)}>
         {category}
-      </MenuItem>
+      </Dropdown.Item>
     ));
   };
 
