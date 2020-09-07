@@ -1,7 +1,7 @@
 import Colors from "../colors/Colors";
 
 class Constants {
-  static BASE_URL = "https://horvathadam.info:8080/api/";
+  static BASE_URL = "https://horvathadam.info/api/";
   static PLACEHOLDER_EMAIL = "Email";
   static PLACEHOLDER_PASSWORD = "Jelszó";
   static TIME_ZONE = "Europe/Budapest";
