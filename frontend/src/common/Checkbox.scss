@@ -27,7 +27,7 @@
           height: 16px;
           border: 2px solid $cost-blue;
           &.checked {
-            background: url("../assets/tick.png") no-repeat center center;
+            background: url("../assets/tick.svg") no-repeat center center;
             background-size: cover;
           }
         }

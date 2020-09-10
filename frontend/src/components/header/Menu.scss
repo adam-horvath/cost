@@ -41,6 +41,9 @@
         cursor: pointer;
         width: 100%;
         display: inline-table;
+          &:hover {
+              text-decoration: underline;
+          }
       }
     }
   }

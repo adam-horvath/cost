@@ -64,7 +64,7 @@ class BarChart extends Component {
       bottom:
         Util.getMaxTextWidth(
           this.data.map(d => d.label),
-          "normal 12px VarelaRound"
+          "normal 12px JmhTypewriter"
         ) + 10,
       left: 80
     };

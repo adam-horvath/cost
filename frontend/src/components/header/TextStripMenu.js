@@ -12,7 +12,7 @@ class TextStripMenu extends Component {
         ) : (
           <React.Fragment>
             <span className="menu-item" onClick={this.props.logout}>
-              Kijelentkezés
+              <div className={"logout-icon"} />
             </span>
           </React.Fragment>
         )}

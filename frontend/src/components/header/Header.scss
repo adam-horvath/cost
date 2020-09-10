@@ -12,11 +12,11 @@
   }
   @media screen and (min-width: 576px) {
     .logo {
-      height: 80px;
+      height: 40px;
       cursor: pointer;
     }
     .header-top {
-      height: 120px;
+      height: 60px;
     }
   }
   @media screen and (max-width: 575.999999px) {
@@ -25,7 +25,7 @@
       cursor: pointer;
     }
     .header-top {
-      height: 80px;
+      height: 60px;
     }
     .title {
       display: none;
@@ -42,10 +42,16 @@
     }
   }
   .title {
-    font-size: 40px;
-    padding: 20px;
+    font-size: 20px;
+    padding: 10px;
     margin: 0;
     cursor: pointer;
     color: white;
   }
+}
+
+.logout-icon {
+    background: url("../../assets/logout.svg") no-repeat center center;
+    width: 30px;
+    height: 30px;
 }

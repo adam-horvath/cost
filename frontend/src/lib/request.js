@@ -7,7 +7,7 @@ export default async ({ url, method = "POST", data } = {}) => {
   const token = localStorage.getItem("cost_token");
 
   if (token) {
-    headers["authorization"] = `${token}`;
+    headers["Authorization"] = `${token}`;
   }
 
   try {

@@ -3,13 +3,14 @@ import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { createBrowserHistory } from 'history';
 import { Provider } from 'react-redux';
-import { Router } from 'react-router-dom';
+import {BrowserRouter, Router} from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
 
 import i18n from 'i18n';
 import store from './redux/reducers';
 import Main from './components/main/Main';
 
+import 'bootstrap/dist/css/bootstrap.css';
 import './index.scss';
 
 import * as serviceWorker from './registerServiceWorker';
@@ -20,9 +21,9 @@ ReactDOM.render(
   <Provider store={store}>
     <Suspense fallback=" ">
       <I18nextProvider i18n={i18n}>
-          <Router history={history}>
+          <BrowserRouter history={history}>
             <Main />
-          </Router>
+          </BrowserRouter>
       </I18nextProvider>
     </Suspense>
   </Provider>,

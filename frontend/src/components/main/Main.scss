@@ -31,12 +31,13 @@
       font-size: 20px;
       margin: 0 auto 10px;
     }
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 768px) {
       > div {
         width: 80%;
+          max-width: 1024px;
       }
     }
-    @media screen and (max-width: 479.999999px) {
+    @media screen and (max-width: 767.999999px) {
       > div {
         width: 100%;
       }

@@ -79,6 +79,9 @@
       padding: 1px 10px;
       height: 50px;
       position: relative;
+      input {
+        font-family: "JmhTypewriter";
+      }
       .react-datepicker-popper[data-placement^="bottom"] {
         margin-top: 10px;
       }
@@ -87,7 +90,7 @@
       }
       .close-icon {
         position: absolute;
-        background: url("../../assets/cross.png") no-repeat center center;
+        background: url("../../assets/cross.svg") no-repeat center center;
         background-size: cover;
         top: 18px;
         right: 18px;
