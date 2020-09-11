@@ -9,7 +9,7 @@ body {
 }
 
 a,
-button {
+button:not(:disabled) {
     cursor: pointer;
     &:focus {
         outline: none;
@@ -18,13 +18,32 @@ button {
 
 .btn.btn-primary {
     &:focus, &:active, &.dropdown-toggle:focus, &.dropdown-toggle:active {
-        background-color: white!important;
-        color: $cost-blue!important;
+        background-color: $cost-blue!important;
+        color: white!important;
         border-color: $cost-blue!important;
         box-shadow: none!important;
     }
-    &:hover {
+    &:hover:not(:disabled) {
+        border-color: $cost-blue-hover!important;
+        background-color: $cost-blue-hover!important;
+    }
+}
+
+.btn.btn-secondary {
+    background-color: white!important;
+    color: $cost-blue!important;
+    border: 2px solid $cost-blue!important;
+    box-shadow: none!important;
+    &:focus, &:active, &.dropdown-toggle:focus, &.dropdown-toggle:active {
+        background-color: white!important;
+        color: $cost-blue!important;
+        border: 2px solid $cost-blue!important;
+        box-shadow: none!important;
+    }
+    &:hover:not(:disabled) {
+        color: white!important;
         border-color: $cost-blue!important;
+        background-color: $cost-blue!important;
     }
 }
 

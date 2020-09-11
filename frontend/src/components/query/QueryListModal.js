@@ -49,7 +49,7 @@ class QueryListModal extends Component {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button bsStyle="primary" type="submit" onClick={this.props.hide}>
+          <Button variant="primary" type="submit" onClick={this.props.hide}>
             OK
           </Button>
         </Modal.Footer>

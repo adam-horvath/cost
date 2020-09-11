@@ -119,14 +119,7 @@ class Util {
         const d = new Date(date.getFullYear(), date.getMonth(), 1);
         const now = new Date();
         return {
-            left: !moment
-                .tz(d, Constants.TIME_ZONE)
-                .endOf("day")
-                .isSame(
-                    moment
-                        .tz(new Date("2015-09-01"), Constants.TIME_ZONE)
-                        .endOf("day")
-                ),
+            left: !moment(d).isSame(moment("2015-09-01"), "day"),
             right: !(
                 date.getFullYear() === now.getFullYear() &&
                 date.getMonth() === now.getMonth()

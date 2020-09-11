@@ -218,9 +218,9 @@ class ItemModal extends Component {
                     </Modal.Body>
 
                     <Modal.Footer className={"flex-nowrap"}>
-                        <Button onClick={this.props.hide}>Mégse</Button>
+                        <Button onClick={this.props.hide} variant="secondary">Mégse</Button>
                         <Button
-                            bsStyle="primary"
+                            className="btn-primary"
                             type="submit"
                             onClick={this.saveItem}
                             disabled={!!this.isInvalidInput()}

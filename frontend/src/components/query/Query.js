@@ -176,29 +176,21 @@ class Query extends Component {
         this.setState({ maxAmount: amount });
     };
 
-    onMinDateChange = momentDate => {
-        console.log(typeof momentDate, momentDate);
-        if (
-            momentDate &&
-            momentDate.isAfter(moment(this.state.maxDate), "day")
-        ) {
+    onMinDateChange = date => {
+        if (date && moment(date).isAfter(moment(this.state.maxDate), "day")) {
             this.setState({ maxDate: null });
         }
-        momentDate
-            ? this.setState({ minDate: new Date(momentDate) })
+        date
+            ? this.setState({ minDate: new Date(date) })
             : this.setState({ minDate: null });
     };
 
-    onMaxDateChange = momentDate => {
-        console.log(typeof momentDate, momentDate);
-        if (
-            momentDate &&
-            momentDate.isBefore(moment(this.state.minDate), "day")
-        ) {
+    onMaxDateChange = date => {
+        if (date && moment(date).isBefore(moment(this.state.minDate), "day")) {
             this.setState({ minDate: null });
         }
-        momentDate
-            ? this.setState({ maxDate: new Date(momentDate) })
+        date
+            ? this.setState({ maxDate: new Date(date) })
             : this.setState({ maxDate: null });
     };
 
@@ -367,7 +359,6 @@ class Query extends Component {
                                                           .selectedCategoryIndex
                                                   ]
                                         }
-                                        id="dropdown"
                                     >
                                         {this.getMenuItems(
                                             this.state

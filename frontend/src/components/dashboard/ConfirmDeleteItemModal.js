@@ -20,7 +20,7 @@ class ConfirmDeleteItemModal extends Component {
 
         <Modal.Footer>
           <Button onClick={this.props.onCancel}>Mégse</Button>
-          <Button bsStyle="primary" onClick={this.props.onConfirm}>
+          <Button variant="primary" onClick={this.props.onConfirm}>
             OK
           </Button>
         </Modal.Footer>

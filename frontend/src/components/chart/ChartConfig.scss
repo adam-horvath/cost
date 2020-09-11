@@ -1,51 +1,63 @@
 @import "../../colors/Colors";
 
 .chart-container {
-  .button-group {
-    height: 50px;
-    .button-group-item {
-      background: white;
-      color: $cost-blue;
-      border: 2px solid $cost-blue;
-      border-radius: 0;
-      border-right: 0;
-      z-index: 0;
-      height: 100%;
-      font-size: 20px;
-      &:last-child {
-        border-right: 2px solid $cost-blue;
-      }
-      &.active {
-        color: white;
-        background: $cost-blue;
-      }
+    .button-group {
+        height: 50px;
+        .button-group-item {
+            width: calc(100% / 3);
+            background: white;
+            color: $cost-blue;
+            border: 2px solid $cost-blue;
+            border-radius: 0;
+            border-right: 0;
+            z-index: 0;
+            height: 100%;
+            font-size: 20px;
+            &:last-child {
+                border-right: 2px solid $cost-blue;
+            }
+            &.active,
+            &.btn.btn-primary:hover:not(:disabled) {
+                color: white !important;
+                background-color: $cost-blue !important;
+            }
+        }
     }
-  }
-  .interval-container {
-    .dropdown-container {
-      &.year {
-        padding: 0 5px 0 0;
-      }
-      &.month, &.type {
-        padding: 0 0 0 5px;
-      }
-      &.full-sized {
-        padding: 0;
-      }
-      .dropdown {
-        margin-bottom: 0;
-      }
+    .interval-container {
+        padding-top: 10px;
+        .dropdown-container {
+            &.year {
+                padding: 0 0 10px;
+            }
+            &.month,
+            &.type {
+                padding: 0;
+            }
+            &.full-sized {
+                padding: 0;
+            }
+            .dropdown {
+                margin-bottom: 0;
+            }
+            @media screen and (min-width: 576px) {
+                &.w_50.year {
+                    padding-right: 10px;
+                }
+                &.month {
+                    padding-left: 10px;
+                }
+            }
+        }
     }
-  }
-  .button-container {
-    .btn {
-      width: 100%;
-      border-radius: 0;
-      border: 0;
-      height: 50px;
-      font-size: 20px;
-      color: white;
-      background-color: $cost-blue;
+    .button-container {
+        .btn {
+            width: 100%;
+            border-radius: 0;
+            border: 0;
+            height: 50px;
+            font-size: 20px;
+            color: white;
+            background-color: $cost-blue;
+        }
     }
-  }
 }

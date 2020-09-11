@@ -5,6 +5,9 @@
   .checkbox-parent {
     padding: 0;
     display: flex;
+      @media screen and (min-width: 400px) and (max-width: 575.98px) {
+          width: 50%;
+      }
     .checkbox {
       height: 50px;
       margin: 0;
@@ -15,14 +18,15 @@
         line-height: 1;
         padding: 16px 36px;
         &:first-child {
-          padding: 16px 4px 16px 36px;
+          padding: 16px 4px 16px 16px;
         }
         input {
           visibility: hidden;
         }
         .tick {
           position: absolute;
-          left: 8px;
+          top: 16px;
+          left: 0;
           width: 16px;
           height: 16px;
           border: 2px solid $cost-blue;
@@ -42,7 +46,7 @@
       }
       .sumbox {
         width: 28px;
-        margin: 0 0 0 -4px;
+        margin: 0 -10px 0 6px;
         label {
           margin: 0 -14px 0 0px;
         }
