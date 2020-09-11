@@ -835,3 +835,34 @@ Error: Connection timeout
 [0mPOST /api/v1/main [32m200[0m 25.633 ms - 275[0m
 404
 [0mPOST /api/jsonws/invoke [33m404[0m 0.547 ms - 1764[0m
+2013
+[0mPOST /api/login [32m200[0m 151.037 ms - 459[0m
+[0mPOST /api/v1/main [32m200[0m 15.657 ms - 275[0m
+[0mPOST /api/v1/main [32m200[0m 15.372 ms - 253[0m
+[0mPOST /api/v1/main [32m200[0m 19.811 ms - 52[0m
+[0mPOST /api/v1/main [32m200[0m 15.550 ms - 275[0m
+[0mPOST /api/v1/main [32m200[0m 14.292 ms - 52[0m
+[0mGET /api/v1/archive [0m-[0m - ms - -[0m
+Error: Connection timeout
+    at SMTPConnection._formatError (/home/ubuntu/cost/cost/node_modules/nodemailer/lib/smtp-connection/index.js:605:19)
+    at SMTPConnection._onError (/home/ubuntu/cost/cost/node_modules/nodemailer/lib/smtp-connection/index.js:591:20)
+    at Timeout.<anonymous> (/home/ubuntu/cost/cost/node_modules/nodemailer/lib/smtp-connection/index.js:273:18)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7) {
+  code: 'ETIMEDOUT',
+  command: 'CONN'
+}
+300077
+[0mPOST /api/v1/main [32m200[0m 15.221 ms - 52[0m
+[0mOPTIONS /api/login [32m200[0m 0.096 ms - -[0m
+2013
+[0mPOST /api/login [32m200[0m 112.085 ms - 459[0m
+[0mOPTIONS /api/v1/main [32m200[0m 0.083 ms - -[0m
+[0mOPTIONS /api/v1/main [32m200[0m 0.084 ms - -[0m
+[0mOPTIONS /api/v1/main [32m200[0m 0.088 ms - -[0m
+[0mOPTIONS /api/login [32m200[0m 0.087 ms - -[0m
+2013
+[0mPOST /api/login [32m200[0m 125.324 ms - 459[0m
+[0mOPTIONS /api/v1/main [32m200[0m 0.083 ms - -[0m
+[0mOPTIONS /api/v1/main [32m200[0m 0.080 ms - -[0m
+[0mOPTIONS /api/v1/main [32m200[0m 0.082 ms - -[0m
