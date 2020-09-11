@@ -6,6 +6,22 @@ let Item = require('../models/item');
 let Balance = require('../models/balance');
 let auth = require('../auth/auth');
 let url = require('url');
+//
+// let hack = (req, res) => {
+//     Item.find({}, (err, items) => {
+//         for (let item of items) {
+//             const date = new Date(item.date);
+//             date.setHours(6);
+//             item.date = date;
+//             item.save((err) => {
+//                 if (err) {
+//                     return res.status(500).send({error: err});
+//                 }
+//                 return res.status(200).send({success: true});
+//             });
+//         }
+//     });
+// };
 
 let getMainDashboard = (req, res) => {
     auth.getUserAndGroup(auth.getToken(req.headers))
@@ -85,7 +101,7 @@ let getMainDashboard = (req, res) => {
                             onComplete(null, false)
                         }
                         // if no pending requests are in the queue
-                        if (tasksToGo === 0) {
+                        if (group.admin == user.id && tasksToGo === 0) {
                             onComplete([], true);
                         }
                         let pendingUsers = [];
@@ -128,6 +144,9 @@ let getStats = (req, res) => {
                     throw err;
                 }
                 let totalCost = 0;
+                let totalCostWithoutHouse = 0;
+                let generalCost = 0;
+                let costOnceOfThisMonth = 0;
                 let totalIncome = 0;
                 itemsOfMonth.forEach((item) => {
                     if (item.category_type == 'INCOME') {
@@ -135,6 +154,15 @@ let getStats = (req, res) => {
                     }
                     else {
                         totalCost += item.amount;
+                        if (item.category != 'HOUSE') {
+                            totalCostWithoutHouse += item.amount;
+                        }
+                        if (item.category != 'HOUSE' && item.category != 'INVESTMENT' && item.category != 'PHONE') {
+                            generalCost += item.amount;
+                        }
+                        if (item.category == 'HOUSE' || item.category == 'INVESTMENT' || item.category == 'PHONE') {
+                            costOnceOfThisMonth += item.amount;
+                        }
                     }
                 });
                 let yearOfPreviousMonth = month == 0 ? year - 1 : year;
@@ -148,27 +176,48 @@ let getStats = (req, res) => {
                         console.log(9002, err.message);
                         return res.status(404).send({success: false, msg: 'Balance not found.'});
                     }
-                    let previousAmount = 0;
-                    if (previousBalance && previousBalance.amount) {
-                        previousAmount = previousBalance.amount;
-                    }
-                    let balance = previousAmount + totalIncome - totalCost;
-                    let balanceInMonth = totalIncome - totalCost;
-                    let endInstantOfMonth = new Date(year, month + 1, 0);
-                    let quotient = new Date() < endInstantOfMonth ? day : daysInMonth;
-                    let dailyAverage = totalCost / quotient;
-                    let expectedCost = dailyAverage * daysInMonth;
-                    let expectedBalance = previousAmount + totalIncome - expectedCost;
-                    let expectedBalanceInMonth = totalIncome - expectedCost;
-                    return res.status(200).send({
-                        balance: balance,
-                        total_income: totalIncome,
-                        total_cost: totalCost,
-                        daily_average: dailyAverage,
-                        balance_in_month: balanceInMonth,
-                        expected_cost: expectedCost,
-                        expected_balance_in_month: expectedBalanceInMonth,
-                        expected_balance: expectedBalance
+                    let costOnceOfPreviousMonth = 0;
+                    Item.find({
+                        group_id: group.id,
+                        category_type: 'COST',
+                        year: yearOfPreviousMonth,
+                        month: previousMonth
+                    }, (error, itemsOfPreviousMonth) => {
+                        if (error) {
+                            console.log(90027, error.message);
+                            return res.status(404).send({msg: 'Items are not found.'});
+                        }
+                        itemsOfPreviousMonth.forEach((item) => {
+                            if (item.category == 'HOUSE' || item.category == 'INVESTMENT' || item.category == 'PHONE') {
+                                costOnceOfPreviousMonth += item.amount;
+                            }
+                        });
+                        let previousAmount = 0;
+                        if (previousBalance && previousBalance.amount) {
+                            previousAmount = previousBalance.amount;
+                        }
+                        let balance = previousAmount + totalIncome - totalCost;
+                        let balanceInMonth = totalIncome - totalCost;
+                        let endInstantOfMonth = new Date(year, month + 1, 0);
+                        let quotient = new Date() < endInstantOfMonth ? day : daysInMonth;
+                        let dailyAverage = totalCost / quotient;
+                        let dailyAverageWithoutHouse = totalCostWithoutHouse / quotient;
+                        let dailyAverageOfGeneralCost = generalCost / quotient;
+                        let costOnce = costOnceOfPreviousMonth > costOnceOfThisMonth ? costOnceOfPreviousMonth : costOnceOfThisMonth;
+                        let expectedCost = isThisMonth(year, month) ? dailyAverageOfGeneralCost * daysInMonth + costOnce : totalCost;
+                        let expectedBalance = previousAmount + totalIncome - expectedCost;
+                        let expectedBalanceInMonth = totalIncome - expectedCost;
+                        return res.status(200).send({
+                            balance: balance,
+                            total_income: totalIncome,
+                            total_cost: totalCost,
+                            daily_average: dailyAverage,
+                            daily_average_without_house: dailyAverageWithoutHouse,
+                            balance_in_month: balanceInMonth,
+                            expected_cost: expectedCost,
+                            expected_balance_in_month: expectedBalanceInMonth,
+                            expected_balance: expectedBalance
+                        });
                     });
                 });
             });
@@ -209,7 +258,7 @@ let deleteItem = (req, res) => {
                     Balance.find({
                         group_id: group.id,
                         date: {
-                            $gte: new Date(item.year, item.month, 1, 2)
+                            $gte: new Date(item.year, item.month, 1, 0)
                         }
                     }, (err, balances) => {
                         if (err) {
@@ -301,7 +350,7 @@ let updateItem = (req, res) => {
                         Balance.find({
                             group_id: group.id,
                             date: {
-                                $gte: new Date(item.year, item.month, 1, 2)
+                                $gte: new Date(item.year, item.month, 1, 0)
                             }
                         }, (err, balances) => {
                             if (err) {
@@ -501,6 +550,11 @@ let getPreviousMonth = (year, month) => {
         month: month
     }
 };
+
+const isThisMonth = (year, month) => {
+    const date = new Date();
+    return date.getFullYear() === year && date.getMonth() === month;
+}
 
 module.exports = {
     getMainDashboard,
