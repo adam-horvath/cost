@@ -3,6 +3,7 @@
  */
 
 let Item = require('../models/item');
+let Balance = require('../models/balance');
 let auth = require('../auth/auth');
 
 let getChartData = (req, res) => {
@@ -77,28 +78,49 @@ let getChartData = (req, res) => {
             }
             for (let categoryType of categoryTypes) {
                 result[categoryType] = [];
-                for (let monthObj of months) {
-                    let query = {
-                        group_id: group.id,
-                        year: monthObj.year,
-                        month: monthObj.month,
-                        category_type: categoryType
-                    };
-                    Item.find(query, (err, items) => {
-                        if (err) {
-                            return res.status(500).send({success: false, msg: 'Error when retrieving items.'});
-                        }
-                        let sum = 0;
-                        items.forEach((item) => {
-                            sum += item.amount;
+                if (categoryType === 'BALANCE') {
+                    for (let monthObj of months) {
+                        let query = {
+                            group_id: group.id,
+                            year: monthObj.year,
+                            month: monthObj.month,
+                        };
+                        Balance.findOne(query, (err, balance) => {
+                            if (err) {
+                                return res.status(500).send({success: false, msg: 'Error when retrieving items.'});
+                            }
+                            result[categoryType].push({
+                                [monthObj.year + '_' + monthObj.month]: balance.amount
+                            });
+                            if (--tasksToGo === 0) {
+                                onComplete(result);
+                            }
                         });
-                        result[categoryType].push({
-                            [monthObj.year + '_' + monthObj.month]: sum
+                    }
+                } else {
+                    for (let monthObj of months) {
+                        let query = {
+                            group_id: group.id,
+                            year: monthObj.year,
+                            month: monthObj.month,
+                            category_type: categoryType
+                        };
+                        Item.find(query, (err, items) => {
+                            if (err) {
+                                return res.status(500).send({success: false, msg: 'Error when retrieving items.'});
+                            }
+                            let sum = 0;
+                            items.forEach((item) => {
+                                sum += item.amount;
+                            });
+                            result[categoryType].push({
+                                [monthObj.year + '_' + monthObj.month]: sum
+                            });
+                            if (--tasksToGo === 0) {
+                                onComplete(result);
+                            }
                         });
-                        if (--tasksToGo === 0) {
-                            onComplete(result);
-                        }
-                    });
+                    }
                 }
             }
         })
