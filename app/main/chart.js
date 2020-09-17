@@ -122,13 +122,8 @@ let getChartData = (req, res) => {
                                         msg: "Error when retrieving items."
                                     });
                             }
-                            const now = new Date();
                             result[categoryType].push({
-                                [monthObj.year + "_" + monthObj.month]:
-                                    monthObj.year === now.getFullYear() &&
-                                    monthObj.month === now.getMonth()
-                                        ? lastMonthBalance + balance.amount
-                                        : balance.amount
+                                [monthObj.year + "_" + monthObj.month]: balance.amount
                             });
                             lastMonthBalance = balance.amount;
                             if (--tasksToGo === 0) {
