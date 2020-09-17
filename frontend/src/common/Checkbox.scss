@@ -39,14 +39,16 @@
     }
     .sumbox-container {
       display: flex;
+        height: 50px;
       span {
         padding: 16px 0;
         font-size: 16px;
         line-height: 1;
+          margin-bottom: 8px;
       }
       .sumbox {
         width: 28px;
-        margin: 0 -10px 0 6px;
+        margin: 0 -10px 8px 6px;
         label {
           margin: 0 -14px 0 0px;
         }
