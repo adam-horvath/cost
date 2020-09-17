@@ -19,6 +19,10 @@ let getChartData = (req, res) => {
             const categoryTypes = req.body.category_types
                 ? req.body.category_types.split(",")
                 : [];
+            if (categoryTypes.includes("BALANCE")) {
+                if (!categoryTypes.includes("COST")) categoryTypes.push("COST");
+                if (!categoryTypes.includes("INCOME")) categoryTypes.push("INCOME");
+            }
             const categories = req.body.categories
                 ? req.body.categories.split(",")
                 : [];
