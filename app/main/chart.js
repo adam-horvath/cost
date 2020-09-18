@@ -19,10 +19,6 @@ let getChartData = (req, res) => {
             const categoryTypes = req.body.category_types
                 ? req.body.category_types.split(",")
                 : [];
-            if (categoryTypes.includes("BALANCE")) {
-                if (!categoryTypes.includes("COST")) categoryTypes.push("COST");
-                if (!categoryTypes.includes("INCOME")) categoryTypes.push("INCOME");
-            }
             const categories = req.body.categories
                 ? req.body.categories.split(",")
                 : [];
@@ -110,31 +106,69 @@ let getChartData = (req, res) => {
             for (let categoryType of categoryTypes) {
                 result[categoryType] = [];
                 if (categoryType === "BALANCE") {
-                    let lastMonthBalance = 0;
-                    for (let monthObj of months) {
-                        let query = {
-                            group_id: group.id,
-                            year: monthObj.year,
-                            month: monthObj.month
-                        };
-                        Balance.findOne(query, (err, balance) => {
-                            if (err) {
-                                return res
+                    const prev = getPreviousMonth(months[0].year, months[0].month);
+                    let query = {
+                        group_id: group.id,
+                        year: prev.year,
+                        month: prev.month,
+                    };
+                    Balance.findOne(query, (err, balance) => {
+                        if (err) {
+                            return res
+                            .status(500)
+                            .send({
+                                success: false,
+                                msg: "Error when retrieving items."
+                            });
+                        }
+                        result['PREV_BALANCE'] = balance && balance.amount ? balance.amount : 0;
+                        for (let monthObj of months) {
+                            Item.find({
+                                group_id: group.id,
+                                year: monthObj.year,
+                                month: monthObj.month,
+                                category_type: "COST"
+                            }, (err, costItems) => {
+                                if (err) {
+                                    return res
                                     .status(500)
                                     .send({
                                         success: false,
-                                        msg: "Error when retrieving items."
+                                        msg: "Error when retrieving cost items."
                                     });
-                            }
-                            result[categoryType].push({
-                                [monthObj.year + "_" + monthObj.month]: balance.amount
+                                }
+                                Item.find({
+                                    group_id: group.id,
+                                    year: monthObj.year,
+                                    month: monthObj.month,
+                                    category_type: "INCOME"
+                                }, (err, incomeItems) => {
+                                    if (err) {
+                                        return res
+                                        .status(500)
+                                        .send({
+                                            success: false,
+                                            msg: "Error when retrieving income items."
+                                        });
+                                    }
+                                    let sumCost = 0;
+                                    costItems.forEach(item => {
+                                        sumCost += item.amount;
+                                    });
+                                    let sumIncome = 0;
+                                    incomeItems.forEach(item => {
+                                        sumIncome += item.amount;
+                                    });
+                                    result[categoryType].push({
+                                        [monthObj.year + "_" + monthObj.month]: sumIncome - sumCost,
+                                    });
+                                    if (--tasksToGo === 0) {
+                                        onComplete(result);
+                                    }
+                                });
                             });
-                            lastMonthBalance = balance.amount;
-                            if (--tasksToGo === 0) {
-                                onComplete(result);
-                            }
-                        });
-                    }
+                        }
+                    });
                 } else {
                     for (let monthObj of months) {
                         let query = {
@@ -184,6 +218,21 @@ let getNextMonth = (year, month) => {
     return {
         year: year,
         month: month
+    };
+};
+
+let getPreviousMonth = (year, month) => {
+    if (month == 0) {
+        year--;
+        return {
+            year,
+            month: 11,
+        };
+    }
+    month--;
+    return {
+        year,
+        month,
     };
 };
 
