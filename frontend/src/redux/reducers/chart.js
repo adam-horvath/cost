@@ -7,7 +7,7 @@ const chart = (
   switch (action.type) {
     case "CHART_DATA":
       for (let key in action.chartData) {
-        if (action.chartData.hasOwnProperty(key)) {
+        if (action.chartData.hasOwnProperty(key) && key !== 'PREV_BALANCE') {
           action.chartData[key].forEach(item => {
             for (let date in item) {
               if (item.hasOwnProperty(date)) {
@@ -31,7 +31,7 @@ const chart = (
         }
       }
       if (action.chartData.hasOwnProperty("BALANCE")) {
-        let sumAmount = 0;
+        let sumAmount = action.chartData["PREV_BALANCE"];
         action.chartData["BALANCE"].forEach(item => {
           sumAmount += item.amount;
           item["sumAmount"] = sumAmount;

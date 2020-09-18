@@ -20,7 +20,7 @@ class BarChart extends Component {
     const values = [];
     const labels = [];
     for (let key in this.props.chart) {
-      if (this.props.chart.hasOwnProperty(key)) {
+      if (this.props.chart.hasOwnProperty(key) && key !== 'PREV_BALANCE') {
         values.push(
           this.props.chart[key].length === 1
             ? this.props.chart[key][0].amount

@@ -26,7 +26,7 @@ class LineChart extends Component {
 
     componentDidMount() {
         for (let key in this.props.chart) {
-            if (this.props.chart.hasOwnProperty(key)) {
+            if (this.props.chart.hasOwnProperty(key) && key !== 'PREV_BALANCE') {
                 this.legends.push(Util.getHungarianCategory(key));
                 if (!this.labels.length) {
                     this.props.chart[key].forEach(d =>
@@ -77,7 +77,7 @@ class LineChart extends Component {
         let minValue = 0;
         let maxValue = 0;
         for (let key in this.props.chart) {
-            if (this.props.chart.hasOwnProperty(key)) {
+            if (this.props.chart.hasOwnProperty(key) && key !== 'PREV_BALANCE') {
                 minValue = Math.min(
                     minValue,
                     ...this.props.chart[key].map(
@@ -119,7 +119,7 @@ class LineChart extends Component {
         // draw the legend
         let shift = 0;
         for (let key in this.props.chart) {
-            if (this.props.chart.hasOwnProperty(key)) {
+            if (this.props.chart.hasOwnProperty(key) && key !== 'PREV_BALANCE') {
                 d3
                     .select(".outer-g")
                     .append("circle")
