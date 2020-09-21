@@ -1,0 +1,19 @@
+App started on http://localhost:8080
+[0mOPTIONS /api/v1/chart [32m200[0m 1.308 ms - -[0m
+[0mPOST /api/v1/chart [32m200[0m 341.068 ms - 561[0m
+[0mOPTIONS /api/v1/chart [32m200[0m 0.156 ms - -[0m
+[0mPOST /api/v1/chart [32m200[0m 289.033 ms - 561[0m
+[0mOPTIONS /api/v1/chart [32m200[0m 0.100 ms - -[0m
+[0mPOST /api/v1/chart [32m200[0m 183.039 ms - 561[0m
+[0mOPTIONS /api/v1/chart [32m200[0m 0.100 ms - -[0m
+[0mPOST /api/v1/chart [32m200[0m 169.695 ms - 561[0m
+[0mOPTIONS /api/v1/chart [32m200[0m 0.109 ms - -[0m
+[0mPOST /api/v1/chart [32m200[0m 245.393 ms - 561[0m
+[0mOPTIONS /api/v1/chart [32m200[0m 0.135 ms - -[0m
+[0mPOST /api/v1/chart [32m200[0m 179.871 ms - 561[0m
+[0mOPTIONS /api/v1/chart [32m200[0m 0.116 ms - -[0m
+[0mPOST /api/v1/chart [32m200[0m 171.135 ms - 561[0m
+[0mOPTIONS /api/v1/chart [32m200[0m 0.090 ms - -[0m
+[0mPOST /api/v1/chart [32m200[0m 177.552 ms - 561[0m
+[0mOPTIONS /api/v1/chart [32m200[0m 0.099 ms - -[0m
+[0mPOST /api/v1/chart [32m200[0m 155.453 ms - 561[0m
