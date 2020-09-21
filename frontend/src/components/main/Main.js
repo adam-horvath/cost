@@ -28,22 +28,22 @@ class Main extends Component {
                             <Switch>
                                 <Route
                                     exact
-                                    path="/cost"
+                                    path={"/"}
                                     component={Dashboard}
                                 />
                                 <Route
                                     exact
-                                    path="/cost/stats"
+                                    path="/stats"
                                     component={Stats}
                                 />
                                 <Route
                                     exact
-                                    path="/cost/query"
+                                    path="/query"
                                     component={Query}
                                 />
                                 <Route
                                     exact
-                                    path="/cost/chart"
+                                    path="/chart"
                                     component={ChartConfig}
                                 />
                             </Switch>

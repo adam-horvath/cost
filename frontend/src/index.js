@@ -21,7 +21,7 @@ ReactDOM.render(
     <Provider store={store}>
         <Suspense fallback=" ">
             <I18nextProvider i18n={i18n}>
-                <BrowserRouter history={history}>
+                <BrowserRouter history={history} basename={'/cost'}>
                     <Main />
                 </BrowserRouter>
             </I18nextProvider>
