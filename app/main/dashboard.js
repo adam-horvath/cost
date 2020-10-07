@@ -66,6 +66,7 @@ let getMainDashboard = (req, res) => {
                     });
                     let yearOfPreviousMonth = month == 0 ? year - 1 : year;
                     let previousMonth = month == 0 ? 11 : month - 1;
+                    console.log(year, month, yearOfPreviousMonth, previousMonth, totalIncome, totalCost);
                     Balance.findOne({
                         group_id: group.id,
                         year: yearOfPreviousMonth,
