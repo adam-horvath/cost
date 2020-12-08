@@ -1,0 +1,399 @@
+{
+  "pageTitle": "Életrajz",
+  "avatarText":
+    "Üdvözöllek! Horváth Ádám vagyok, munkámat tekintve webfejlesztő. Ezen az oldalon viszont olyan aspektusból is megismerhetsz, mint a valamikori egyetemi oktató és kutató, a lokálpatrióta zenész, a szaunamester vagy a családapa. Jó böngészést!",
+  "bioEvents": [
+    {
+      "year": 2021,
+      "texts": [
+        {
+          "value": "Március 1-jétől az "
+        },
+        {
+          "value": "Erste Banknál",
+          "href": "https://www.erstebank.hu/hu/ebh-nyito"
+        },
+        {
+          "value": " fogok dolgozni mint szoftverfejlesztő."
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "texts": [
+        {
+          "value": "A tavaszi félév lezárásával lezártam az egyetemi oktatói pályafutásomat is."
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "texts": [
+        {
+          "value":
+            "A helyi nemzetiségi önkormányzati választások után ismét a fertőhomoki Horvát Nemzetiségi Önkormányzat elnöke lettem."
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "texts": [
+        {
+          "value": "A "
+        },
+        {
+          "value": "Wellness- és Szállodaipari Felnőttképző Intézet",
+          "href": "https://www.wszfi.hu/"
+        },
+        {
+          "value": " OKJ-s szaunamester képzésén "
+        },
+        {
+          "value": "szaunamester",
+          "href": "https://www.szauna-szeansz.hu/"
+        },
+        {
+          "value": " lettem."
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "texts": [
+        {
+          "value": "A Soproni Egyetemen egyetemi docensi kinevezést kaptam."
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "texts": [
+        {
+          "value": "Az Attrectónál szenior fejlesztő lettem."
+        }
+      ]
+    },
+    {
+      "year": 2017,
+      "texts": [
+        {
+          "value": "Július 13-án megszületett harmadik gyermekem, Zsófia."
+        }
+      ]
+    },
+    {
+      "year": 2015,
+      "texts": [
+        {
+          "value": "Főállású egyetemi pályámat másodállásúra váltottam, s főállásban a győri "
+        },
+        {
+          "value": "Attrectónál",
+          "href": "http://beta.di.unito.it/index.php/english"
+        },
+        {
+          "value": " kezdtem dolgozni frontend fejlesztőként."
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "texts": [
+        {
+          "value": "Ph.D. fokozatot szereztem Dr. Farkas Károly és "
+        },
+        {
+          "value": "Dr. Do Van Tien",
+          "href": "http://www.hit.bme.hu/~do/Contact.htm"
+        },
+        {
+          "value": " témavezetése mellett. Disszertációm címe "
+        },
+        {
+          "value": "Some Performance Analysis Applications of Stochastic Modeling",
+          "href": "https://horvathadam.info/publications/horvath-thesis.pdf"
+        },
+        {
+          "value": " (A sztochasztikus modellezés néhány teljesítményvizsgálati alkalmazása) volt."
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "texts": [
+        {
+          "value": "A doktori fokozat megszerzése után adjunktusi kinevezést kaptam."
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "texts": [
+        {
+          "value":
+            "A helyi nemzetiségi önkormányzati választások után a fertőhomoki Horvát Nemzetiségi Önkormányzat elnöke lettem."
+        }
+      ]
+    },
+    {
+      "year": 2013,
+      "texts": [
+        {
+          "value": "Március 20-án megszületett második gyermekem, Mátyás."
+        }
+      ]
+    },
+    {
+      "year": 2011,
+      "texts": [
+        {
+          "value": "December 22-én megszületett első gyermekem, Benedek."
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "texts": [
+        {
+          "value": "Július 31-én feleségül vettem Szeregnyi Zsuzsannát Kisvárdán."
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "texts": [
+        {
+          "value":
+            "Ősztől a Nyugat-magyarországi Egyetem Simonyi Károly Karának tanársegédje lettem. Ugyanezen őszön egy hónapot töltöttem a torinói "
+        },
+        {
+          "value": "Universita di Torino Informatikai Karán",
+          "href": "http://beta.di.unito.it/index.php/english"
+        },
+        {
+          "value": ", s ez nagyban hozzájárult a későbbi fokozatszerzésemhez."
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "texts": [
+        {
+          "value":
+            "A helyi kisebbségi önkormányzati választáson ismét a Horvát Kisebbségi Önkormányzat alelnöke lettem."
+        }
+      ]
+    },
+    {
+      "year": 2009,
+      "texts": [
+        {
+          "value": "Megjelent a Kajkavci tamburaegyüttes "
+        },
+        {
+          "value": "10 zlatnih godina",
+          "href": "https://kajkavci.hu/hu/diszkografia"
+        },
+        {
+          "value":
+            " című szerzői lemeze. A lemez két dalának is én szereztem a zenéjét. Ebben az évben vettem át az együttes vezetését Szallmer Jánostól."
+        }
+      ]
+    },
+    {
+      "year": 2008,
+      "texts": [
+        {
+          "value":
+            "A tavaszi félévben óraadóként segítettem az informatikaoktatást volt középiskolámban, a Szent Orsolya Gimnáziumban."
+        }
+      ]
+    },
+    {
+      "year": 2007,
+      "texts": [
+        {
+          "value": "Mérnök-informatikus diplomát szereztem, diplomamunkámat "
+        },
+        {
+          "value": "Dr. Jereb László",
+          "href": "http://eit.bme.hu/content/dr-jereb-laszlo"
+        },
+        {
+          "value": " vezetésével írtam konszolidált hálózatok megbízhatósági analíziséről."
+        }
+      ]
+    },
+    {
+      "year": 2007,
+      "texts": [
+        {
+          "value": "Megkezdtem doktori tanulmányaimat Sopronban a Nyugat-magyarországi Egyetemen "
+        },
+        {
+          "value": "Dr. Farkas Károly",
+          "href": "http://www.hit.bme.hu/~farkask"
+        },
+        {
+          "value": " témavezetése mellett. A doktori iskola mellett bekapcsolódtam az akkor Faipari Mérnöki Kar (ma "
+        },
+        {
+          "value": "Simonyi Károly Kar",
+          "href": "http://skk.uni-sopron.hu/"
+        },
+        {
+          "value": ") "
+        },
+        {
+          "value": "Informatikai és Gazdasági Intézetének",
+          "href": "https://inf.uni-sopron.hu/"
+        },
+        {
+          "value:": " oktatási életébe is."
+        }
+      ]
+    },
+    {
+      "year": 2007,
+      "texts": [
+        {
+          "value": "Megjelent a Kajkavci tamburaegyüttes újabb népzenei lemeze "
+        },
+        {
+          "value": "Mi smo kajkavci",
+          "href": "https://kajkavci.hu/hu/diszkografia"
+        },
+        {
+          "value": " címmel."
+        }
+      ]
+    },
+    {
+      "year": 2006,
+      "texts": [
+        {
+          "value": "A helyi kisebbségi önkormányzati választások után a Horvát Kisebbségi Önkormányzat alelnöke lettem."
+        }
+      ]
+    },
+    {
+      "year": 2006,
+      "texts": [
+        {
+          "value": "Megjelent a Kajkavci tamburaegyüttes "
+        },
+        {
+          "value": "Radujte se narodi",
+          "href": "https://kajkavci.hu/hu/diszkografia"
+        },
+        {
+          "value": " című karácsonyi lemeze."
+        }
+      ]
+    },
+    {
+      "year": 2005,
+      "texts": [
+        {
+          "value": "Badacsonylábdihegyen",
+          "href":
+            "https://www.google.com/maps/place/Herczeg+Ferenc+strand/@46.7978188,17.4591653,13z/data=!4m8!1m2!2m1!1sbadacsonyl%C3%A1bdihegy+strand!3m4!1s0x476900e991d733e5:0xa77555a873ab7697!8m2!3d46.7899756!4d17.4735041"
+        },
+        {
+          "value": " megismerkedtem későbbi feleségemmel, Szeregnyi Zsuzsannával."
+        }
+      ]
+    },
+    {
+      "year": 2004,
+      "texts": [
+        {
+          "value": "Megjelent a Kajkavci tamburaegyüttes "
+        },
+        {
+          "value": "Slatke tajne",
+          "href": "https://kajkavci.hu/hu/diszkografia"
+        },
+        {
+          "value": " című népzenei lemeze."
+        }
+      ]
+    },
+    {
+      "year": 2001,
+      "texts": [
+        {
+          "value": "Érettségi után felvételt nyertem a "
+        },
+        {
+          "value": "Budapesti Műszaki és Gazdaságtudományi Egyetem Villamosmérnöki és Informatikai Kar",
+          "href": "http://www.vik.bme.hu/"
+        },
+        {
+          "value": " műszaki informatika szakára."
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "texts": [
+        {
+          "value": "Március 11-én megalakult a "
+        },
+        {
+          "value": "Kajkavci tamburaegyüttes",
+          "href": "https://kajkavci.hu/"
+        },
+        {
+          "value": ", melynek a kezdetektől tagja vagyok."
+        }
+      ]
+    },
+    {
+      "year": 1993,
+      "texts": [
+        {
+          "value": "Középiskolába a soproni "
+        },
+        {
+          "value": "Szent Orolya Gimnáziumba",
+          "href": "http://sztorsolya.hu/"
+        },
+        {
+          "value": " jártam."
+        }
+      ]
+    },
+    {
+      "year": 1989,
+      "texts": [
+        {
+          "value": "Megkezdtem tanulmányaimat a Hegykői Általános Iskolában (ma "
+        },
+        {
+          "value": "Fertő-táj Általános Iskola",
+          "href": "http://www.hegykoiskola.hu/"
+        },
+        {
+          "value": ")."
+        }
+      ]
+    },
+    {
+      "year": 1983,
+      "texts": [
+        {
+          "value": "Május 17-én születtem Sopronban. Születésem óta "
+        },
+        {
+          "value": "Fertőhomokon",
+          "href":
+            "https://www.google.com/maps/place/Fert%C5%91homok,+9492/@47.6389177,16.6971553,12z/data=!3m1!4b1!4m5!3m4!1s0x476c19e3622bff55:0x400c4290c1e95f0!8m2!3d47.6196363!4d16.7710445"
+        },
+        {
+          "value": " élek."
+        }
+      ]
+    }
+  ]
+}

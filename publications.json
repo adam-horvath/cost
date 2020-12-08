@@ -1,0 +1,166 @@
+{
+  "pageTitle": "Tudományos publikációk",
+  "publications": [
+    {
+      "year": 2017,
+      "authors": "Molnár András, Horváth Ádám",
+      "title": "TiPeNeSS: Egy általános tüzelési eloszlású Petri-háló szimulátor",
+      "link": null,
+      "info": "Informatika a felsőoktatásban 2017 konferencia, pp. 379-395, Debrecen, 2017. augusztus."
+    },
+    {
+      "year": 2016,
+      "authors": "Horváth Ádám, Molnár András",
+      "title": "TiPeNeSS: A Timed Petri Net Simulator Software with Generally Distributed Firing Delays",
+      "link": "http://eudl.eu/doi/10.4108/eai.24-8-2015.2261343",
+      "info": "EAI Endorsed Transactions on Industrial Networks and Intelligent Systems, ISSN 2410-0218, Vol. 16, No. 8, 2016."
+    },
+    {
+      "year": 2015,
+      "authors": "Horváth Ádám, Molnár András",
+      "title": "TiPeNeSS: A Timed Petri Net Simulator Software with Generally Distributed Firing Delays",
+      "link": "https://eudl.eu/doi/10.4108/eai.24-8-2015.2261343",
+      "info": "SimuTools 2015 konferencia, Athén, Görögország, augusztus 24-26, 2015."
+    },
+    {
+      "year": 2015,
+      "authors": "Tien Van Do, Nam Hoai Do, Horváth Ádám, Jinting Wang",
+      "title": "Modelling Opportunistic Spectrum Renting in Mobile Cellular Networks",
+      "link": "https://horvathadam.info/publications/do-do-horvath-wang_final.pdf",
+      "info": "Journal of Network and Computer Applications, Volume 52 (2015), ISSN: 1084-8045, pp. 129-138, 2015."
+    },
+    {
+      "year": 2015,
+      "authors": "Horváth Ádám, Bérczes Tamás",
+      "title": "Spectrum Renting with Two Finite Source Pools in Mobile Cellular Networks",
+      "link": "https://horvathadam.info/publications/horvath_berczes_communications.pdf",
+      "info": "Communications - Scientific Letter of the University of Zilina, ISSN: 1335-4205, No. 1a/2015, pp. 4-11, 2015."
+    },
+    {
+      "year": 2014,
+      "authors": "Horváth Ádám",
+      "title": "Applications of Stochastic Modeling in Performance Analysis",
+      "link": "https://www.lap-publishing.com/catalog/details//store/gb/book/978-3-659-54834-5/applications-of-stochastic-modeling-in-performance-analysis",
+      "info": "Lambert Acadamic Publishing, ISBN 978-3-659-54834-5, 2014."
+    },
+    {
+      "year": 2014,
+      "authors": "Bérczes Tamás, Sztrik János, Jinting Wang, Xuelu Zhang, Fang Wang, Horváth Ádám",
+      "title": "Mobil hálózatok véges forrású modellezése spectrum renting és handover hívások használatával",
+      "link": "https://horvathadam.info/publications/berczes_et_al.pdf",
+      "info": "Informatika a felsőoktatásban 2014 konferencia, pp. 464-469, Debrecen, 2014. augusztus."
+    },
+    {
+      "year": 2014,
+      "authors": "Molnár András, Horváth Ádám",
+      "title": "DSPNSim: Szimulációs szoftver determinisztikus és sztochasztikus Petri hálókra",
+      "link": "https://horvathadam.info/publications/molnar-horvath_IF_2014.pdf",
+      "info": "Informatika a felsőoktatásban 2014 konferencia, pp. 826-833, Debrecen, 2014. augusztus."
+    },
+    {
+      "year": 2014,
+      "authors": "Horváth Ádám",
+      "title": "Some Performance Analysis Applications of Stochastic Modeling",
+      "link": "https://horvathadam.info/publications/horvath_thesis.pdf",
+      "info": "Ph.D. disszertáció, 2014."
+    },
+    {
+      "year": 2014,
+      "authors": "Bérczes Tamás, Horváth Ádám",
+      "title": "A Finite-Source Queuing Model for Spectrum Renting in Mobile Cellular Networks",
+      "link": "https://horvathadam.info/publications/berczes-horvath.pdf",
+      "info": "In Proc. of the 10th International Conference Elektro 2014, pp. 26-30, 2014."
+    },
+    {
+      "year": 2014,
+      "authors": "Horváth Ádám",
+      "title": "Usability of Deterministic and Stochastic Petri Nets in the Wood Industry: a Case Study",
+      "link": "https://horvathadam.info/publications/ICCSAMA_horvath.pdf",
+      "info": "In Proc. of the 2nd International Conference on Computer Science, Applied Mathematics and Applications, pp. 119-127, 2014."
+    },
+    {
+      "year": 2013,
+      "authors": "Horváth Ádám",
+      "title": "Applying Opportunistic Spectrum Access in Mobile Cellular Networks",
+      "link": "https://horvathadam.info/publications/horvath_aosamcn.pdf",
+      "info": "Infocommunications Journal, ISSN: 2061-2079, Volume 5, Number 2, pp. 36-40, 2013."
+    },
+    {
+      "year": 2012,
+      "authors": "Boros János, Horváth Ádám",
+      "title": "GSM szolgáltatók közötti együttműködés vizsgálata",
+      "link": "https://horvathadam.info/publications/boros_horvath_gsm.pdf",
+      "info": "OGIK 2012 konferencia, 1 oldal, Győr, 2012."
+    },
+    {
+      "year": 2012,
+      "authors": "Horváth Ádám, Farkas Károly",
+      "title": "Techniques for Modeling Mobile Application Spreading",
+      "link": "https://horvathadam.info/publications/InfoCommHF12.pdf",
+      "info": "Infocommunications Journal, ISSN: 2061-2079, Volume IV, Number 1, pp. 13-20, 2012."
+    },
+    {
+      "year": 2012,
+      "authors": "Schaffer Péter, Farkas Károly, Horváth Ádám, Holczer Tamás, Buttyán Levente",
+      "title": "Secure and Reliable Clustering in Wireless Sensor Networks: A Critical Survey",
+      "link": "https://horvathadam.info/publications/SchafferFHHB12comnet.pdf",
+      "info": "Elsevier Computer Networks, ISSN: 1389-1286, pp. 2726-2741, 2012."
+    },
+    {
+      "year": 2011,
+      "authors": "Boros János, Horváth Ádám, Jereb László",
+      "title": "Szűk keresztmetszetek feltárása többrétegű architektúrákban",
+      "link": "https://horvathadam.info/publications/boros-horvath-jereb_IF2011.pdf",
+      "info": "Informatika a felsőoktatásban 2011 konferencia, pp. 758-765, Debrecen, 2011. augusztus."
+    },
+    {
+      "year": 2011,
+      "authors": "Marco Beccuti, Massimiliano De Pierro, Horváth András, Horváth Ádám, Farkas Károly",
+      "title": "A Mean Field Based Methodology for Modeling Mobility in Ad Hoc Networks",
+      "link": "https://horvathadam.info/publications/beccuti_depierro_horvath_horvath_farkas_vtc2011spring.pdf",
+      "info": "In Proc. of the 73rd IEEE Vehicular Technology Conference (VTC2011-Spring), 5 oldal, Budapest, 2011. május."
+    },
+    {
+      "year": 2011,
+      "authors": "Horváth Ádám, Farkas Károly",
+      "title": "Modeling Self-Organized Application Spreading",
+      "link": "https://horvathadam.info/publications/horvath_farkas_accessnets2010_cam_ready.pdf",
+      "info": "In Proc. of the Fifth International ICST Conference on Access Networks (ACCESSNETS 2010), 10 oldal, Budapest, 2010. november."
+    },
+    {
+      "year": 2010,
+      "authors": "Horváth Ádám, Farkas Károly",
+      "title": "Modeling Application Spreading using Mobile Ad Hoc Networks",
+      "link": "https://horvathadam.info/publications/horvath-farkas_WMNC2010_Budapest_cam_ready.pdf",
+      "info": "In Proc. of the Third Joint IFIP Wireless and Mobile Networking Conference (WMNC 2010), 6 oldal, Budapest, 2010. október."
+    },
+    {
+      "year": 2010,
+      "authors": "Bacsárdi László, Horváth Ádám",
+      "title": "Mobil ad hoc hálózatok az alkalmazott informatikában",
+      "link": "https://horvathadam.info/publications/bacsardi-horvath_gep_2010.pdf",
+      "info": "GÉP (a Gépipari Tudományos Egyesület folyóirata, ISSN 0016-8572), évf. LXI., 2010/1-2. pp. 25-27, 2010."
+    },
+    {
+      "year": 2010,
+      "authors": "Horváth Ádám, Farkas Károly",
+      "title": "Alkalmazások terjedésének vizsgálata mobil ad hoc hálózatokban",
+      "link": "https://horvathadam.info/publications/IKT2010_horvath-farkas.pdf",
+      "info": "Az Informatika Korszerű Technikái (IKT 2010), 6 oldal, Dunaújváros, 2010. március."
+    },
+    {
+      "year": 2010,
+      "authors": "Horváth Ádám",
+      "title": "Modeling Opportunistic Application Spreading",
+      "link": "https://horvathadam.info/publications/horvath-sigproc-sp.pdf",
+      "info": "In Proc. of the PhD Forum of the 2nd International ACM/SIGMOBILE Workshop on Mobile Opportunistic Networking (MobiOpp 2010), pp. 207-208, Pisa, Olaszország, 2010. február."
+    },
+    {
+      "year": 2007,
+      "authors": "Horváth Ádám, Kárász Tamás",
+      "title": "Modeling Opportunistic Application Spreading",
+      "link": "https://horvathadam.info/publications/HTE2007_horvath_final.pdf",
+      "info": "BME-HTE végzős és doktorandusz hallgatói konferencia, 4 oldal, Budapest, 2007. május."
+    }
+  ]
+}
