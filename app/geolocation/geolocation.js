@@ -10,11 +10,10 @@ let getCity = async (req, res) => {
   try {
     const cities = await nearbyCities({ latitude: lat, longitude: lng });
     return res.status(200).send({
-      cities,
-      msg:
+      city:
         cities && cities.length
-          ? `A visszaadott városok száma: ${cities.length}`
-          : "Nincs találat."
+          ? cities[0]
+          : {}
     });
   } catch (err) {
     console.log(5178, err.message);
