@@ -7,7 +7,7 @@ let getCity = (req, res) => {
     return res.json({ success: false, msg: "No location data provided." });
   }
   const { lat, lng } = req.query;
-  nearbyCities({ lat, lng })
+  nearbyCities({ latitude: lat, longitude: lng })
     .then(result => {
       return res.status(200).send({
         result,
