@@ -4,9 +4,7 @@ const getCity = (res, req) => {
   const input = req.body;
   if (!input || !input.lat || !input.lng) {
     console.log(5177, "No location data provided.");
-    return res
-      .status(400)
-      .send({ success: false, msg: "No location data provided." });
+    return res.json({ success: false, msg: "No location data provided." });
   }
   const { lat, lng } = req.body;
   nearbyCities({ lat, lng })
