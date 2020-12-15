@@ -1,12 +1,12 @@
-const nearbyCities = require("nearby-cities");
+let nearbyCities = require("nearby-cities");
 
-const getCity = (res, req) => {
-  const input = req.body;
+let getCity = (req, res) => {
+  const input = req.query;
   if (!input || !input.lat || !input.lng) {
     console.log(5177, "No location data provided.");
     return res.json({ success: false, msg: "No location data provided." });
   }
-  const { lat, lng } = req.body;
+  const { lat, lng } = req.query;
   nearbyCities({ lat, lng })
     .then(result => {
       return res.status(200).send({

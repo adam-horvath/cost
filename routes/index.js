@@ -19,7 +19,7 @@ let router = express.Router();
 router.post('/register', auth.register);
 router.post('/login', auth.login);
 router.get('/verify', email.verify);
-router.post('/geocode', geolocation.getCity);
+router.get('/geocode', geolocation.getCity);
 
 /*
  * Routes that can be accessed only by authenticated users
