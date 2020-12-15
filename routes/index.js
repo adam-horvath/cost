@@ -9,15 +9,17 @@ let email = require('../app/auth/email');
 let admin = require('../app/admin/admin');
 let query = require('../app/main/query');
 let chart = require('../app/main/chart');
+let geolocation = require('../app/geolocation/geolocation');
 
 let router = express.Router();
 
 /*
- * Routes that can be accessed by any one
+ * Routes that can be accessed by anyone
  */
 router.post('/register', auth.register);
 router.post('/login', auth.login);
 router.get('/verify', email.verify);
+router.post('/geocode', geolocation.getCity);
 
 /*
  * Routes that can be accessed only by authenticated users
