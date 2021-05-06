@@ -1,2 +1,2 @@
 mongodump -d node-cost -o .
-tar -cvzf /var/www/dump/archive.tar.gz /var/www/dump/node-cost
+tar -cvzf /home/ubuntu/cost/cost/dump/archive.tar.gz /home/ubuntu/cost/cost/dump/node-cost
