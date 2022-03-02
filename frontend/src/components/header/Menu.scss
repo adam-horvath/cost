@@ -1,4 +1,4 @@
-@import "../../colors/Colors";
+@import 'styles/colors';
 
 .cost {
   header {
@@ -41,9 +41,9 @@
         cursor: pointer;
         width: 100%;
         display: inline-table;
-          &:hover {
-              text-decoration: underline;
-          }
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

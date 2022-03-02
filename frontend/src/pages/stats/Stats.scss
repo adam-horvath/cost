@@ -1,0 +1,55 @@
+@import "styles/colors";
+
+.cost {
+  .stats-container {
+    > div {
+      padding: 10px;
+      height: 60px;
+      background: $light-gray;
+      .stats-label {
+        position: absolute;
+        font-size: 14px;
+        color: $cost-blue;
+      }
+      .amount {
+        padding: 6px 0;
+      }
+      @media screen and (min-width: 576px) {
+        .stats-label {
+          max-width: 20%;
+        }
+        .amount {
+          text-align: center;
+        }
+      }
+      @media screen and (max-width: 575.999999px) {
+        .stats-label {
+          max-width: 40%;
+        }
+        .amount {
+          text-align: right;
+        }
+      }
+    }
+    .green-item {
+      .amount {
+        color: $cost-green;
+      }
+    }
+    .red-item {
+      .amount {
+        color: $cost-red;
+      }
+    }
+    .month-pager-container {
+      display: flex;
+      background: $cost-blue;
+      .month-pager {
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 6px 0;
+      }
+    }
+  }
+}

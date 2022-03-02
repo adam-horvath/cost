@@ -1,0 +1,16 @@
+@import "styles/colors";
+
+.cost {
+  .dashboard {
+    @media screen and (min-width: 768px) {
+      .date-picker-container .react-datepicker-popper[data-placement^="top"] {
+        margin-bottom: 19px;
+      }
+    }
+    @media screen and (max-width: 767.999999px) {
+      .date-picker-container .react-datepicker-popper[data-placement^="top"] {
+        margin-bottom: -50px;
+      }
+    }
+  }
+}

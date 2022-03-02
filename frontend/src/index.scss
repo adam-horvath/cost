@@ -1,65 +1,78 @@
-@import "./colors/Colors";
+@import "styles/colors";
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: JmhTypewriter, sans-serif !important;
-    background: #fff;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: JmhTypewriter, sans-serif !important;
+  background: #fff;
+  overflow-x: hidden;
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, "Courier New", monospace;
 }
 
 a,
 button:not(:disabled) {
-    cursor: pointer;
-    &:focus {
-        outline: none;
-    }
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
 }
 
 .btn.btn-primary {
-    &:focus, &:active, &.dropdown-toggle:focus, &.dropdown-toggle:active {
-        background-color: $cost-blue!important;
-        color: white!important;
-        border-color: $cost-blue!important;
-        box-shadow: none!important;
-    }
-    &:hover:not(:disabled) {
-        border-color: $cost-blue-hover!important;
-        background-color: $cost-blue-hover!important;
-    }
+  &:focus,
+  &:active,
+  &.dropdown-toggle:focus,
+  &.dropdown-toggle:active {
+    background-color: $cost-blue !important;
+    color: white !important;
+    border-color: $cost-blue !important;
+    box-shadow: none !important;
+  }
+  &:hover:not(:disabled) {
+    border-color: $cost-blue-hover !important;
+    background-color: $cost-blue-hover !important;
+  }
 }
 
 .btn.btn-secondary {
-    background-color: white!important;
-    color: $cost-blue!important;
-    border: 2px solid $cost-blue!important;
-    box-shadow: none!important;
-    &:focus, &:active, &.dropdown-toggle:focus, &.dropdown-toggle:active {
-        background-color: white!important;
-        color: $cost-blue!important;
-        border: 2px solid $cost-blue!important;
-        box-shadow: none!important;
-    }
-    &:hover:not(:disabled) {
-        color: white!important;
-        border-color: $cost-blue!important;
-        background-color: $cost-blue!important;
-    }
+  background-color: white !important;
+  color: $cost-blue !important;
+  border: 2px solid $cost-blue !important;
+  box-shadow: none !important;
+  &:focus,
+  &:active,
+  &.dropdown-toggle:focus,
+  &.dropdown-toggle:active {
+    background-color: white !important;
+    color: $cost-blue !important;
+    border: 2px solid $cost-blue !important;
+    box-shadow: none !important;
+  }
+  &:hover:not(:disabled) {
+    color: white !important;
+    border-color: $cost-blue !important;
+    background-color: $cost-blue !important;
+  }
 }
 
 .show > .dropdown-toggle {
-    background-color: white!important;
-    color: $cost-blue!important;
-    border-color: $cost-blue!important;
-    box-shadow: none!important;
+  background-color: white !important;
+  color: $cost-blue !important;
+  border-color: $cost-blue !important;
+  box-shadow: none !important;
 }
 
 input {
-    outline: none;
+  outline: none;
 }
 
 @font-face {
-    font-family: "JmhTypewriter";
-    src: local("JmhTypewriter"),
-        url(./fonts/jmh-typewriter.otf) format("opentype");
+  font-family: "JmhTypewriter";
+  src: local("JmhTypewriter"),
+    url(assets/fonts/jmh-typewriter.otf) format("opentype");
 }

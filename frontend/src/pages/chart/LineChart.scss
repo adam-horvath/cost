@@ -1,0 +1,48 @@
+@import "styles/colors";
+
+.line-chart-container {
+  height: 500px;
+  .line-chart {
+    width: 100%;
+    height: 100%;
+    background-color: $light-gray;
+    .amount-text {
+      font-size: 11px;
+    }
+    .axis {
+      .domain {
+        stroke: $cost-blue;
+      }
+      .tick {
+        line {
+          stroke: $cost-blue;
+        }
+        text {
+          fill: $cost-blue;
+          font-size: 11px;
+          font-family: JmhTypewriter, sans-serif;
+          font-weight: normal;
+        }
+      }
+    }
+    .outer-g {
+      margin: 0 auto;
+      width: 100%;
+      .legend-text {
+        font-size: 14px;
+      }
+    }
+    circle.dot:hover {
+      cursor: pointer;
+    }
+    .tooltip-text {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 991.999999px) {
+  .line-chart-container {
+    height: 300px;
+  }
+}

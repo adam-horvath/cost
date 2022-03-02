@@ -1,0 +1,41 @@
+@import "styles/colors";
+
+.bar-chart-container {
+  height: 300px;
+  &:not(.small) {
+    height: 500px;
+  }
+  .bar-chart {
+    width: 100%;
+    height: 100%;
+    background-color: $light-gray;
+    rect {
+      color: $cost-blue;
+    }
+    .amount-text {
+      font-size: 11px;
+    }
+    .axis {
+      .domain {
+        stroke: $cost-blue;
+      }
+      .tick {
+        line {
+          stroke: $cost-blue;
+        }
+        text {
+          fill: $cost-blue;
+          font-size: 11px;
+          font-family: JmhTypewriter, sans-serif;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 991.999999px) {
+    .line-chart-container {
+      height: 300px;
+    }
+  }
+}

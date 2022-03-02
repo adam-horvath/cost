@@ -1,0 +1,50 @@
+@import "styles/colors";
+
+.login {
+  width: 320px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  .input-box {
+    div, label {
+      color: $cost-blue;
+    }
+  }
+
+  label {
+    display: block;
+    padding-bottom: 4px;
+  }
+
+  input,
+  button {
+    width: 100%;
+    height: 50px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+  }
+  input {
+    background-color: white;
+    color: #3f51b5;
+    border: 1px solid #3f51b5;
+    font-family: JmhTypewriter;
+    font-size: 1rem;
+  }
+  input:-webkit-autofill {
+    -webkit-text-fill-color: $cost-blue !important;
+    -webkit-box-shadow: 0 0 0 30px white inset;
+  }
+
+  input:-webkit-autofill::first-line {
+    font-family: JmhTypewriter;
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 16px;
+    margin-top: 10px;
+    color: white;
+    background-color: $cost-blue;
+    border: 0;
+  }
+}
