@@ -33,7 +33,6 @@ const authSlice = createSlice({
     logout() {
       setToken(null);
       const history = createBrowserHistory();
-      history.push('/login');
       history.go(0);
     },
   },
