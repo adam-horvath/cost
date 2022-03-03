@@ -23,11 +23,11 @@ class App extends Component<AppProps> {
           <Header authenticated={!!token} />
           {!!token ? (
             <Switch>
-              <Route exact path={'/'} component={Dashboard} />
+              <Route exact path={'/cost'} component={Dashboard} />
               <Route exact path={'/stats'} component={Stats} />
               <Route exact path={'/query'} component={Query} />
               <Route exact path="/chart" component={Charts} />
-              <Redirect to={'/'} />
+              <Redirect to={'/cost'} />
             </Switch>
           ) : (
             <Login />
