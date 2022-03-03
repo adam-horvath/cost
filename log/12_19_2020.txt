@@ -1,0 +1,206 @@
+App started on http://localhost:8080
+connected!!!!!!!!
+/api/login
+false
+ACKNOWLEDGED
+2013
+[0mPOST /api/login [32m200[0m 149.007 ms - 459[0m
+/api/v1/stats
+[0mPOST /api/v1/stats [32m200[0m 40.366 ms - 289[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 26.952 ms - 51[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 18.944 ms - 51[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 26.016 ms - 515[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 19.708 ms - 51[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 19.914 ms - 51[0m
+/api/v1/item
+5024
+[0mPOST /api/v1/item [32m200[0m 21.434 ms - 41[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 22.586 ms - 274[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 23.152 ms - 51[0m
+/api/v1/item
+5024
+[0mPOST /api/v1/item [32m200[0m 6.673 ms - 41[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 19.338 ms - 276[0m
+/api/v1/item
+5024
+[0mPOST /api/v1/item [32m200[0m 7.954 ms - 41[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 37.336 ms - 503[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 23.694 ms - 515[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 19.051 ms - 1177[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 18.362 ms - 277[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 21.387 ms - 509[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 18.276 ms - 277[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 17.075 ms - 1177[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 16.581 ms - 515[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 23.099 ms - 503[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 28.617 ms - 515[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 17.809 ms - 503[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 17.884 ms - 274[0m
+/api/v1/item
+5024
+[0mPOST /api/v1/item [32m200[0m 6.152 ms - 41[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 17.935 ms - 500[0m
+/api/v1/item
+5024
+[0mPOST /api/v1/item [32m200[0m 6.266 ms - 41[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 17.898 ms - 726[0m
+/api/v1/item
+5024
+[0mPOST /api/v1/item [32m200[0m 6.204 ms - 41[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 22.850 ms - 953[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 22.758 ms - 503[0m
+/api/v1/item
+5024
+[0mPOST /api/v1/item [32m200[0m 6.391 ms - 41[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 17.766 ms - 745[0m
+/api/v1/item
+5024
+[0mPOST /api/v1/item [32m200[0m 7.605 ms - 41[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 26.078 ms - 985[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 21.847 ms - 954[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 16.297 ms - 985[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 21.311 ms - 516[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 23.053 ms - 1178[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 16.205 ms - 516[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 15.792 ms - 985[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 16.865 ms - 954[0m
+/api/v1/stats
+[0mPOST /api/v1/stats [32m200[0m 24.385 ms - 276[0m
+/api/v1/stats
+[0mPOST /api/v1/stats [32m200[0m 24.087 ms - 252[0m
+/api/v1/stats
+[0mPOST /api/v1/stats [32m200[0m 27.096 ms - 276[0m
+/api/jsonws/invoke
+404
+[0mPOST /api/jsonws/invoke [33m404[0m 1.674 ms - 1764[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 19.219 ms - 954[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 17.210 ms - 954[0m
+/api/v1/item
+5024
+[0mPOST /api/v1/item [32m200[0m 9.574 ms - 41[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 17.969 ms - 1179[0m
+/api/v1/item/5fde508c7c7f19c1581e8ff9
+5009
+[0mDELETE /api/v1/item/5fde508c7c7f19c1581e8ff9 [32m200[0m 10.927 ms - 42[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 17.167 ms - 954[0m
+/api/v1/item
+5024
+[0mPOST /api/v1/item [32m200[0m 5.850 ms - 41[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 16.835 ms - 1181[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 18.373 ms - 1181[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 17.881 ms - 1181[0m
+/api/v1/item
+5018
+[0mPUT /api/v1/item [32m200[0m 12.001 ms - 56[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 16.590 ms - 1181[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 16.776 ms - 1181[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 16.545 ms - 985[0m
+/api/v1/stats
+[0mPOST /api/v1/stats [32m200[0m 23.056 ms - 276[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 17.040 ms - 1181[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 17.378 ms - 1181[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 15.512 ms - 1181[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 15.682 ms - 1181[0m
+/api/v1/item
+5024
+[0mPOST /api/v1/item [32m200[0m 5.696 ms - 41[0m
+/api/v1/main
+2020
+[0mPOST /api/v1/main [32m200[0m 19.798 ms - 1407[0m
+/api/jsonws/invoke
+404
+[0mPOST /api/jsonws/invoke [33m404[0m 1.872 ms - 1764[0m
