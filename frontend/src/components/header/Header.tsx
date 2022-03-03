@@ -38,10 +38,10 @@ class Header extends Component<HeaderProps, HeaderState> {
     return (
       <header>
         <div className={'header-top'}>
-          <Link to="/">
+          <Link to="/cost">
             <img src={logo} className="logo" alt="logo" />
           </Link>
-          <Link to="/">
+          <Link to="/cost">
             <h1 className="title">{t('COMMON.APP_NAME')}</h1>
           </Link>
           {token ? (
