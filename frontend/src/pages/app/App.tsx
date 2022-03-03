@@ -34,7 +34,7 @@ class App extends Component<AppProps> {
               <Route exact path={'/login'} component={Login} />
             </Switch>
           )}
-          {!!notification ? <Notification /> : null}s
+          {!!notification ? <Notification /> : null}
         </>
       </div>
     );
