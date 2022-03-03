@@ -1,4 +1,5 @@
 import axios, { AxiosError, AxiosRequestConfig } from 'axios';
+import { createBrowserHistory } from 'history';
 
 import { Token } from 'common/Constants';
 import store from 'store';

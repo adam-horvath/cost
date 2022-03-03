@@ -1,14 +1,15 @@
 import React, { FC, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
+import { History } from 'history';
 
 import './Hamburger.scss';
 
 export interface HamburgerProps {
   openMenu: boolean;
   switchMenuState: () => void;
-  logout: () => void;
+  logout: (history: History) => void;
 }
 
 export const Hamburger: FC<HamburgerProps> = ({
@@ -17,6 +18,7 @@ export const Hamburger: FC<HamburgerProps> = ({
   logout,
 }) => {
   const { t } = useTranslation();
+  const history = useHistory();
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
@@ -79,7 +81,7 @@ export const Hamburger: FC<HamburgerProps> = ({
             {t('MENU.CHARTS')}
           </Link>
         </div>
-        <div className="menu-item" onClick={logout}>
+        <div className="menu-item" onClick={() => logout(history)}>
           {t('MENU.LOGOUT')}
         </div>
       </div>

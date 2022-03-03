@@ -32,7 +32,7 @@ class App extends Component<AppProps> {
           ) : (
             <Login />
           )}
-          {!!notification ? <Notification /> : null}
+          {!!notification ? <Notification /> : null}s
         </>
       </div>
     );

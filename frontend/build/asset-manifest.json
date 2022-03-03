@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/cost/static/css/main.32c3fca2.chunk.css",
-    "main.js": "/cost/static/js/main.0423b040.chunk.js",
-    "main.js.map": "/cost/static/js/main.0423b040.chunk.js.map",
+    "main.css": "/cost/static/css/main.ea1cca1a.chunk.css",
+    "main.js": "/cost/static/js/main.2d361754.chunk.js",
+    "main.js.map": "/cost/static/js/main.2d361754.chunk.js.map",
     "runtime-main.js": "/cost/static/js/runtime-main.562b9dfa.js",
     "runtime-main.js.map": "/cost/static/js/runtime-main.562b9dfa.js.map",
     "static/css/2.5e9c75ef.chunk.css": "/cost/static/css/2.5e9c75ef.chunk.css",
-    "static/js/2.019ef750.chunk.js": "/cost/static/js/2.019ef750.chunk.js",
-    "static/js/2.019ef750.chunk.js.map": "/cost/static/js/2.019ef750.chunk.js.map",
+    "static/js/2.e8c787f9.chunk.js": "/cost/static/js/2.e8c787f9.chunk.js",
+    "static/js/2.e8c787f9.chunk.js.map": "/cost/static/js/2.e8c787f9.chunk.js.map",
     "index.html": "/cost/index.html",
-    "precache-manifest.19d043cbb8a5380235300ab4cc1ce7cf.js": "/cost/precache-manifest.19d043cbb8a5380235300ab4cc1ce7cf.js",
+    "precache-manifest.a5d3264c8b21d6d69614a22078b42939.js": "/cost/precache-manifest.a5d3264c8b21d6d69614a22078b42939.js",
     "service-worker.js": "/cost/service-worker.js",
     "static/css/2.5e9c75ef.chunk.css.map": "/cost/static/css/2.5e9c75ef.chunk.css.map",
-    "static/css/main.32c3fca2.chunk.css.map": "/cost/static/css/main.32c3fca2.chunk.css.map",
-    "static/js/2.019ef750.chunk.js.LICENSE.txt": "/cost/static/js/2.019ef750.chunk.js.LICENSE.txt",
+    "static/css/main.ea1cca1a.chunk.css.map": "/cost/static/css/main.ea1cca1a.chunk.css.map",
+    "static/js/2.e8c787f9.chunk.js.LICENSE.txt": "/cost/static/js/2.e8c787f9.chunk.js.LICENSE.txt",
     "static/media/Query.scss": "/cost/static/media/cross.2b6770c8.svg",
     "static/media/AddItemContainer.scss": "/cost/static/media/ic_remove_circle_outline_white_48px.2fcd706b.svg",
     "static/media/item-list.scss": "/cost/static/media/ic_shopping_cart_white_48px.2ad9452e.svg",
@@ -21,13 +21,14 @@
     "static/media/Dialog.scss": "/cost/static/media/ic_delete_white_48px.775dd71f.svg",
     "static/media/index.scss": "/cost/static/media/jmh-typewriter.14b8af43.otf",
     "static/media/logo.svg": "/cost/static/media/logo.7b710682.svg",
+    "static/media/Header.scss": "/cost/static/media/logout.8a17f34e.svg",
     "static/media/Checkbox.scss": "/cost/static/media/tick.2faa73d5.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.562b9dfa.js",
     "static/css/2.5e9c75ef.chunk.css",
-    "static/js/2.019ef750.chunk.js",
-    "static/css/main.32c3fca2.chunk.css",
-    "static/js/main.0423b040.chunk.js"
+    "static/js/2.e8c787f9.chunk.js",
+    "static/css/main.ea1cca1a.chunk.css",
+    "static/js/main.2d361754.chunk.js"
   ]
 }

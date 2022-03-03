@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
-import {withTranslation, WithTranslation} from 'react-i18next';
+import { withTranslation, WithTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 import { TextStripMenu } from './TextStripMenu';

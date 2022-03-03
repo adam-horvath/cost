@@ -1,12 +1,10 @@
-import { AxiosError } from "axios";
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { AxiosError } from 'axios';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createBrowserHistory } from 'history';
 
-import { AuthService } from "services/auth.service";
-import {
-  CredentialsModel,
-  CredentialsResponseModel
-} from "models/auth.model";
-import { Token } from "common/Constants";
+import { AuthService } from 'services/auth.service';
+import { CredentialsModel, CredentialsResponseModel } from 'models/auth.model';
+import { Token } from 'common/Constants';
 
 export interface AuthState {
   loading: boolean;
@@ -16,23 +14,29 @@ export interface AuthState {
 }
 
 const authSlice = createSlice({
-  name: "auth",
+  name: 'auth',
   initialState: {
     loading: false,
     token: localStorage.getItem(Token) || null,
     id: null,
-    error: null
+    error: null,
   } as AuthState,
   reducers: {
-    setTokenAndId: (state, action: PayloadAction<CredentialsResponseModel | null>) => {
+    setTokenAndId: (
+      state,
+      action: PayloadAction<CredentialsResponseModel | null>,
+    ) => {
       setToken(action.payload?.token);
       state.token = action.payload?.token || null;
       state.id = action.payload?.id;
     },
     logout() {
       setToken(null);
-    }
-  }
+      const history = createBrowserHistory();
+      history.push('/login');
+      history.go(0);
+    },
+  },
 });
 
 const { actions, reducer } = authSlice;
@@ -46,7 +50,7 @@ const setToken = (token?: string | null) => {
 };
 
 export const login = (credentials: CredentialsModel) => async (
-  dispatch: AppDispatch
+  dispatch: AppDispatch,
 ) => {
   try {
     const authResponse = await AuthService.login(credentials);
