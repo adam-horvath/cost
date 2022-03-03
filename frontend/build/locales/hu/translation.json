@@ -1,0 +1,141 @@
+{
+  "COMMON": {
+    "APP_NAME": "Kassza",
+    "OK": "OK",
+    "CANCEL": "Mégse",
+    "CATEGORIES": {
+      "INCOME": "Bevétel",
+      "COST": "Kiadás",
+      "BALANCE": "Egyenleg",
+      "SALARY": "Fizetés",
+      "STATE": "Állam",
+      "GIFT": "Ajándék",
+      "LOAN": "Kölcsön",
+      "OTHER": "Egyéb",
+      "BANK": "Bank",
+      "CAR": "Autó",
+      "CLOTHES": "Ruha",
+      "DRINK": "Kocsma",
+      "FOOD": "Kaja",
+      "GROCERY": "Bevásárlás",
+      "HOUSE": "Ház",
+      "INVESTMENT": "Befektetés",
+      "LUXURY": "Luxus",
+      "OVERHEAD": "Rezsi",
+      "PHARMACY": "Gyógyszertár",
+      "PHONE": "Telefon",
+      "TRAVEL": "Utazás"
+    },
+    "ENGLISH_CATEGORIES": {
+      "Egyenleg": "BALANCE",
+      "Bevétel": "INCOME",
+      "Kiadás": "COST",
+      "Fizetés": "SALARY",
+      "Állam": "STATE",
+      "Ajándék": "GIFT",
+      "Kölcsön": "LOAN",
+      "Egyéb": "OTHER",
+      "Bank": "BANK",
+      "Autó": "CAR",
+      "Ruha": "CLOTHES",
+      "Kocsma": "DRINK",
+      "Kaja": "FOOD",
+      "Bevásárlás": "GROCERY",
+      "Ház": "HOUSE",
+      "Befektetés": "INVESTMENT",
+      "Luxus": "LUXURY",
+      "Rezsi": "OVERHEAD",
+      "Gyógyszertár": "PHARMACY",
+      "Telefon": "PHONE",
+      "Utazás": "TRAVEL"
+    }
+  },
+  "LOGIN": {
+    "EMAIL": "Email",
+    "PASSWORD": "Jelszó",
+    "LOGIN": "Bejelentkezés"
+  },
+  "MENU": {
+    "MAIN": "Főoldal",
+    "STATS": "Statisztikák",
+    "QUERIES": "Lekérdezések",
+    "CHARTS": "Diagramok",
+    "LOGOUT": "Kijelentkezés"
+  },
+  "DASHBOARD": {
+    "DELETE": {
+      "TITLE": "Tétel törlése",
+      "ARE_YOU_SURE": "Biztosan törölni szeretnéd?"
+    },
+    "COST": "Kiadás",
+    "INCOME": "Bevétel",
+    "BALANCE": "Egyenleg: {{balance}} Ft",
+    "ITEM_MODAL": {
+      "AMOUNT": "Összeg",
+      "CATEGORY": "Kategória",
+      "DESCRIPTION": "Leírás",
+      "DATE": "Dátum",
+      "ADD_AMOUNT": "{{itemType}} felvétele",
+      "UPDATE_AMOUNT": "Tétel frissítése"
+    }
+  },
+  "STATS": {
+    "LABELS": {
+      "0": "Egyenleg",
+      "1": "Havi bevétel",
+      "2": "Havi kiadás",
+      "3": "Havi egyenleg",
+      "4": "Napi átlag kiadás",
+      "5": "Változó kiadások napi átlaga",
+      "6": "Várható kiadás",
+      "7": "Várható havi egyenleg",
+      "8": "Várható hó végi egyenleg"
+    }
+  },
+  "QUERY": {
+    "ITEM": "Tétel",
+    "BALANCE": "Egyenleg",
+    "INCOME": "Bevétel",
+    "COST": "Kiadás",
+    "YEAR": "Év",
+    "MONTH": "Hónap",
+    "LABELS": {
+      "QUERY_TYPE": "Lekérdezés típusa",
+      "CATEGORY_TYPE": "Kategória típusa",
+      "CATEGORY": "Kategória",
+      "DESCRIPTION": "Leírás",
+      "FULL_MATCH": "Teljes egyezés",
+      "YES": "Igen",
+      "NO": "Nem",
+      "MIN_AMOUNT": "Minimum összeg",
+      "MAX_AMOUNT": "Maximum összeg",
+      "MIN_DATE": "Minimum összeg",
+      "MAX_DATE": "Minimum összeg",
+      "FROM": "Ettől",
+      "TO": "Eddig",
+      "SUM": "Összeg",
+      "LIST": "Lista"
+    },
+    "MODAL_TITLE": "A lekérdezés eredménye",
+    "AMOUNT": "Összeg"
+  },
+  "CHART": {
+    "INTERVAL_TYPE": "Intervallum típusa",
+    "MONTHLY": "Havi",
+    "YEARLY": "Éves",
+    "FULL": "Teljes",
+    "YEAR": "Év",
+    "MONTH": "Hónap",
+    "CHART_TYPE": "Diagram-típus",
+    "AMOUNT": "Összeg",
+    "TREND": "Trend",
+    "CATEGORIES": "Kategóriák",
+    "BAR_CHART_SUM_BY_CATEGORIES": "Kategóriák szerinti összesítés",
+    "LINE_CHART_SUM_BY_CATEGORIES": "Kategóriák trendje"
+  },
+  "ERRORS": {
+    "FIELD_REQUIRED": "A mező kitöltése kötelező!",
+    "EMAIL_INVALID": "Helytelen email formátum!",
+    "AMOUNT_INVALID": "Helytelen összeg!"
+  }
+}
