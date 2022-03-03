@@ -32,6 +32,7 @@ class App extends Component<AppProps> {
           ) : (
             <Switch>
               <Route exact path={'/login'} component={Login} />
+              <Redirect to={'/login'} />
             </Switch>
           )}
           {!!notification ? <Notification /> : null}
