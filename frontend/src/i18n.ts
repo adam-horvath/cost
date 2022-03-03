@@ -14,7 +14,7 @@ i18n
   .use(initReactI18next)
   .init({
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
+      loadPath: 'cost/locales/{{lng}}/{{ns}}.json',
     },
     load: 'languageOnly',
     fallbackLng: DEFAULT_LANGUAGE,
