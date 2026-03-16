@@ -1,80 +1,73 @@
-let express     = require('express');
-let bodyParser  = require('body-parser');
-let morgan      = require('morgan');
-let mongoose    = require('mongoose');
-let passport	= require('passport');
-let config      = require('./config/database'); // get db config file
-let port        = process.env.PORT || 8080;
-let app         = express();
+require("dotenv").config();
+const express = require("express");
+const morgan = require("morgan");
+const mongoose = require("mongoose");
+const passport = require("passport");
+const config = require("./config/database");
+const fs = require("fs");
+const util = require("util");
 
-// for logging
-let fs = require('fs');
-let util = require('util');
-let date = new Date();
-let month = date.getMonth() + 1;
-let fileName = './log/' + date.getFullYear() + '-' + month + '-' + date.getDate() +'.log';
-let log_file = null;
-if (!fs.existsSync(fileName)) {
-    log_file = fs.createWriteStream(fileName, {flags: 'w'});
-}
-let log_stdout = process.stdout;
+const port = process.env.PORT || 8080;
+const app = express();
 
-console.log = (d) => {
-    let date = new Date();
-    let month = date.getMonth() + 1;
-    let fileName = './log/' + date.getFullYear() + '-' + month + '-' + date.getDate() +'.log';
-    if (!fs.existsSync(fileName)) {
-        log_file = fs.createWriteStream(fileName, {flags: 'w'});
-        log_file.write(date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds() + '\t' + util.format(d) + '\r\n');
-    }
-    else {
-        log_file = fs.appendFileSync(fileName, date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds() + '\t' + util.format(d) + '\r\n');
-    }
-    log_stdout.write(util.format(d) + '\n');
+// File logger — writes every console.log call to a daily log file.
+// TODO (step 5): replace with winston/pino.
+const log_stdout = process.stdout;
+console.log = (...args) => {
+    const d = new Date();
+    const fileName = `./log/${d.getFullYear()}-${
+        d.getMonth() + 1
+    }-${d.getDate()}.log`;
+    const timestamp = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}\t`;
+    const line = timestamp + args.map((a) => util.format(a)).join(" ") + "\r\n";
+    fs.appendFileSync(fileName, line);
+    log_stdout.write(args.map((a) => util.format(a)).join(" ") + "\n");
 };
 
-// get our request parameters
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-// log to console
-app.use(morgan('dev'));
-
-// Use the passport package in our application
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(morgan("dev"));
 app.use(passport.initialize());
 
-// connect to database
 mongoose.connect(config.database);
+mongoose.connection.on("error", (err) =>
+    console.log("MongoDB connection error:", err.message)
+);
 
-// pass passport for configuration
-require('./config/passport')(passport);
+require("./config/passport")(passport);
 
-
-app.all('/*', function(req, res, next) {
-    // CORS headers
-    res.header("Access-Control-Allow-Origin", "*"); // restrict it to the required domain
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    // Set custom headers for CORS
-    res.header('Access-Control-Allow-Headers', 'Content-type,Accept,X-Access-Token,X-Key,Authorization');
-    if (req.method == 'OPTIONS') {
-        res.status(200).end();
-    } else {
-        next();
-    }
-});
-
-app.all('/api/v1/*', [require('./app/auth/validateRequest')]);
-
-app.use('/api', require('./routes/index'));
-
-// If no route is matched by now, it must be a 404
+// CORS — restrict CORS_ORIGIN in production via .env
 app.use((req, res, next) => {
-    let err = new Error('Not Found');
-    err.status = 404;
-    console.log(404, 'Not found');
-    next(err);
+    res.header("Access-Control-Allow-Origin", process.env.CORS_ORIGIN || "*");
+    res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Content-type,Accept,X-Access-Token,X-Key,Authorization"
+    );
+    if (req.method === "OPTIONS") {
+        return res.status(200).end();
+    }
+    next();
 });
 
-// Start the server
-app.listen(port);
-console.log('App started on http://localhost:' + port);
+// JWT auth middleware applied to all protected routes
+app.use("/api/v1", require("./app/auth/validateRequest"));
+
+app.use("/api", require("./routes/index"));
+
+// 404 handler
+app.use((req, res) => {
+    res.status(404).json({ success: false, msg: "Not found." });
+});
+
+// Central error handler — catches errors thrown from async route handlers (Express 5)
+app.use((err, req, res, next) => {
+    console.log("Unhandled error:", err.message);
+    const status = err.status || err.statusCode || 500;
+    res.status(status).json({
+        success: false,
+        msg: err.message || "Internal server error.",
+    });
+});
+
+app.listen(port, () => console.log(`App started on http://localhost:${port}`));
