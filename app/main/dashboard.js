@@ -55,13 +55,16 @@ const computeStats = ({ itemsOfMonth, itemsOfPreviousMonth, previousBalance, yea
       totalIncome += item.amount;
     } else {
       totalCost += item.amount;
-      if (onceInMonthCategories.has(item.category)) {
+      const isOnce = onceInMonthCategories.has(item.category);
+      console.log(`[DEBUG] category=${item.category} amount=${item.amount} isOnce=${isOnce}`);
+      if (isOnce) {
         costOnceOfThisMonth += item.amount;
       } else {
         generalCost += item.amount;
       }
     }
   }
+  console.log(`[DEBUG] generalCost=${generalCost} totalCost=${totalCost}`);
   let costOnceOfPreviousMonth = 0;
   for (const item of itemsOfPreviousMonth) {
     if (onceInMonthCategories.has(item.category)) costOnceOfPreviousMonth += item.amount;
