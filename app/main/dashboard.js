@@ -41,45 +41,24 @@ const getMainDashboard = async (req, res) => {
   });
 };
 
-const getStats = async (req, res) => {
-  const { group } = await auth.getUserAndGroup(auth.getToken(req.headers));
-  const date = req.body.date ? new Date(req.body.date) : new Date();
-  const year = date.getFullYear();
-  const month = date.getMonth();
-  const day = date.getDate();
+// Pure computation — extracted so it can be unit-tested without a database.
+const computeStats = ({ itemsOfMonth, itemsOfPreviousMonth, previousBalance, year, month, day }) => {
   const daysInMonth = new Date(year, month + 1, 0).getDate();
-  const { year: prevYear, month: prevMonth } = getPreviousMonth(year, month);
-  const [itemsOfMonth, itemsOfPreviousMonth, previousBalance] = await Promise.all([
-    Item.find({ group_id: group.id, year, month }),
-    Item.find({
-      group_id: group.id,
-      category_type: 'COST',
-      year: prevYear,
-      month: prevMonth,
-    }),
-    Balance.findOne({
-      group_id: group.id,
-      year: prevYear,
-      month: prevMonth,
-    }),
-  ]);
+  const onceInMonthCategories = new Set(['HOUSE', 'INVESTMENT', 'PHONE']);
   let totalCost = 0,
     generalCost = 0,
     costOnceOfThisMonth = 0,
     totalIncome = 0;
-
-  const onceInMonthCategories = new Set(['HOUSE', 'INVESTMENT', 'PHONE']);
 
   for (const item of itemsOfMonth) {
     if (item.category_type === 'INCOME') {
       totalIncome += item.amount;
     } else {
       totalCost += item.amount;
-      if (!onceInMonthCategories.has(item.category)) {
-        generalCost += item.amount;
-      }
       if (onceInMonthCategories.has(item.category)) {
         costOnceOfThisMonth += item.amount;
+      } else {
+        generalCost += item.amount;
       }
     }
   }
@@ -98,7 +77,7 @@ const getStats = async (req, res) => {
   const expectedCost = isThisMonth(year, month) ? dailyAverageOfGeneralCost * daysInMonth + costOnce : totalCost;
   const expectedBalance = previousAmount + totalIncome - expectedCost;
   const expectedBalanceInMonth = totalIncome - expectedCost;
-  return res.status(200).send({
+  return {
     balance,
     total_income: totalIncome,
     total_cost: totalCost,
@@ -108,7 +87,22 @@ const getStats = async (req, res) => {
     expected_cost: expectedCost,
     expected_balance_in_month: expectedBalanceInMonth,
     expected_balance: expectedBalance,
-  });
+  };
+};
+
+const getStats = async (req, res) => {
+  const { group } = await auth.getUserAndGroup(auth.getToken(req.headers));
+  const date = req.body.date ? new Date(req.body.date) : new Date();
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  const day = date.getDate();
+  const { year: prevYear, month: prevMonth } = getPreviousMonth(year, month);
+  const [itemsOfMonth, itemsOfPreviousMonth, previousBalance] = await Promise.all([
+    Item.find({ group_id: group.id, year, month }),
+    Item.find({ group_id: group.id, category_type: 'COST', year: prevYear, month: prevMonth }),
+    Balance.findOne({ group_id: group.id, year: prevYear, month: prevMonth }),
+  ]);
+  return res.status(200).send(computeStats({ itemsOfMonth, itemsOfPreviousMonth, previousBalance, year, month, day }));
 };
 
 const deleteItem = async (req, res) => {
@@ -284,4 +278,5 @@ module.exports = {
   deleteItem,
   updateItem,
   getStats,
+  computeStats, // exported for unit tests
 };
