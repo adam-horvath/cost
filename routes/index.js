@@ -2,7 +2,6 @@
  * Created by horvath on 2017. 05. 08.
  */
 let express = require('express');
-let passport = require('passport');
 let dashboard = require('../app/main/dashboard');
 let auth = require('../app/auth/auth');
 let email = require('../app/auth/email');
