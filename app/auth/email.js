@@ -1,12 +1,9 @@
-/**
- * Created by horvath on 2017. 05. 10.
- */
-let express = require("express");
-let nodemailer = require("nodemailer");
-let User = require("../models/user");
-let Group = require("../models/group");
+const nodemailer = require("nodemailer");
+const crypto = require("crypto");
+const User = require("../models/user");
+const Group = require("../models/group");
 
-let transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
         user: process.env.MAIL_USER,
@@ -14,146 +11,60 @@ let transporter = nodemailer.createTransport({
     },
 });
 
-let rand, mailOptions, host, link;
+const getTransporter = () => transporter;
 
-let getTransporter = () => {
-    return transporter;
-};
-
-let sendMail = (req, res) => {
-    rand = Math.floor(Math.random() * 1000000 + 54321);
-    host = req.get("host");
-    link = "https://imhotep.nyme.hu:14433/api/verify?id=" + rand;
-    mailOptions = {
+// Generates a secure random token, persists it on the User record,
+// and sends a verification email. Returns a Promise.
+// The caller is responsible for sending the HTTP response.
+const sendMail = async (email, host) => {
+    const token = crypto.randomBytes(32).toString("hex");
+    await User.findOneAndUpdate({ email }, { verification_token: token });
+    const link = `https://${host}/api/verify?id=${token}`;
+    await transporter.sendMail({
         from: "Cost Family",
-        to: req.body.email,
+        to: email,
         subject: "email-cím megerősítése",
-        html:
-            "Hello,<br> Kérlek kattints a linkre, hogy megerősítsd az email-címedet.<br><a href=" +
-            link +
-            ">Kattints ide</a>",
-    };
-    transporter.sendMail(mailOptions, (err, result) => {
-        if (err) {
-            console.log(3000, err.message);
-            return res
-                .status(500)
-                .send({ success: true, message: err.message });
-        } else {
-            console.log(3001, "Message sent to " + req.body.email);
-            return res
-                .status(200)
-                .send({ success: true, message: "Message sent." });
-        }
+        html: `Hello,<br> Kérlek kattints a linkre, hogy megerősítsd az email-címedet.<br><a href="${link}">Kattints ide</a>`,
     });
 };
 
-let verify = (req, res) => {
-    if (req.protocol + "://" + req.get("host") == "http://" + host) {
-        if (req.query.id == rand) {
-            User.findOne(
-                {
-                    email: mailOptions.to,
-                },
-                (err, user) => {
-                    if (err) {
-                        console.log(3002, err.message);
-                        return res
-                            .status(404)
-                            .send({ success: false, msg: "User not found." });
-                    }
-                    if (!user) {
-                        console.log(3003, "User not found.");
-                        return res
-                            .status(404)
-                            .send({ success: false, msg: "User not found." });
-                    } else {
-                        Group.findById(user.group_id, (err, group) => {
-                            if (err || !group) {
-                                console.log(3004, "Group not found");
-                                return res
-                                    .status(404)
-                                    .send({
-                                        success: false,
-                                        msg: "Group not found.",
-                                    });
-                            }
-                            if (group.admin == user.id) {
-                                user.account_type = "ACKNOWLEDGED";
-                                user.save((err) => {
-                                    if (err) {
-                                        console.log(3005, err.message);
-                                        throw err;
-                                    }
-                                    console.log(
-                                        3006,
-                                        mailOptions.to + " verified."
-                                    );
-                                    return res.status(200).send({
-                                        email: mailOptions.to,
-                                        message:
-                                            "A(z) " +
-                                            mailOptions.to +
-                                            " címet sikeresen megerősítetted. Te vagy a csoport adminisztrátora.",
-                                    });
-                                });
-                            } else {
-                                user.account_type = "CONFIRMED";
-                                // notify admin about the user's request
-                                group.pending_requests.push(user.id);
-                                group.save((err) => {
-                                    if (err) {
-                                        console.log(3007, err.message);
-                                        return res
-                                            .status(500)
-                                            .send({
-                                                success: false,
-                                                msg:
-                                                    "Error while saving group.",
-                                            });
-                                    }
-                                    user.save((err) => {
-                                        if (err) {
-                                            console.log(3008, err.message);
-                                            throw err;
-                                        }
-                                        console.log(
-                                            3009,
-                                            mailOptions.to + " verified."
-                                        );
-                                        return res.status(200).send({
-                                            email: mailOptions.to,
-                                            message:
-                                                "A(z) " +
-                                                mailOptions.to +
-                                                " címet sikeresen megerősítetted. Várj, amíg az admin elfogadja a csatlakozási kérésedet!",
-                                        });
-                                    });
-                                });
-                            }
-                        });
-                    }
-                }
-            );
-        } else {
-            console.log(3010, "Bad request.");
-            return res
-                .status(400)
-                .send({ success: false, message: "Bad request" });
-        }
-    } else {
-        console.log(3011, "Request is from unknown source.");
+// Handles GET /api/verify?id=TOKEN
+const verify = async (req, res) => {
+    const token = req.query.id;
+    if (!token) {
         return res
-            .status(500)
-            .send({
-                success: false,
-                message: "Request is from unknown source.",
-            });
+            .status(400)
+            .send({ success: false, message: "Missing token." });
     }
+    const user = await User.findOne({ verification_token: token });
+    if (!user) {
+        return res
+            .status(404)
+            .send({ success: false, msg: "User not found or token expired." });
+    }
+    const group = await Group.findById(user.group_id);
+    if (!group) {
+        return res
+            .status(404)
+            .send({ success: false, msg: "Group not found." });
+    }
+    user.verification_token = undefined;
+    if (group.admin && group.admin.equals(user._id)) {
+        user.account_type = "ACKNOWLEDGED";
+        await user.save();
+        return res.status(200).send({
+            email: user.email,
+            message: `A(z) ${user.email} címet sikeresen megerősítetted. Te vagy a csoport adminisztrátora.`,
+        });
+    }
+    user.account_type = "CONFIRMED";
+    group.pending_requests.push(user._id);
+    await group.save();
+    await user.save();
+    return res.status(200).send({
+        email: user.email,
+        message: `A(z) ${user.email} címet sikeresen megerősítetted. Várj, amíg az admin elfogadja a csatlakozási kérésedet!`,
+    });
 };
 
-module.exports = {
-    sendMail,
-    verify,
-    getTransporter,
-};
+module.exports = { sendMail, verify, getTransporter };

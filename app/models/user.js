@@ -1,40 +1,43 @@
 /**
  * Created by horvath on 2017. 05. 08.
  */
-let mongoose = require('mongoose');
+let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
-let bcrypt = require('bcryptjs');
+let bcrypt = require("bcryptjs");
 
 // set up a mongoose model
 let UserSchema = new Schema({
     email: {
         type: String,
         unique: true,
-        required: true
+        required: true,
     },
     password: {
         type: String,
-        required: true
+        required: true,
     },
     name: {
-        type: String
+        type: String,
     },
     account_type: {
         type: String,
-        enum: [ 'REGISTERED', 'CONFIRMED', 'ACKNOWLEDGED', 'REJECTED' ],
-        default: 'REGISTERED',
-        required: true
+        enum: ["REGISTERED", "CONFIRMED", "ACKNOWLEDGED", "REJECTED"],
+        default: "REGISTERED",
+        required: true,
     },
     group_id: {
         type: Schema.Types.ObjectId,
-        ref: 'group',
-        required: true
-    }
+        ref: "group",
+        required: true,
+    },
+    verification_token: {
+        type: String,
+    },
 });
 
-UserSchema.pre('save', function (next) {
+UserSchema.pre("save", function (next) {
     let user = this;
-    if (this.isModified('password') || this.isNew) {
+    if (this.isModified("password") || this.isNew) {
         bcrypt.genSalt(10, function (err, salt) {
             if (err) {
                 return next(err);
@@ -61,4 +64,4 @@ UserSchema.methods.comparePassword = function (password, callback) {
     });
 };
 
-module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model("User", UserSchema);
