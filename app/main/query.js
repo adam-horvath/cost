@@ -36,9 +36,9 @@ const buildItemQuery = (group, body) => {
   };
   if (description_like === 'true') {
     // escape user input before constructing a RegExp to prevent ReDoS
-    q.description = new RegExp(escapeStringRegexp(description), 'i');
+    q.description = new RegExp(escapeStringRegexp(description.trim()), 'i');
   } else if (description) {
-    q.description = description;
+    q.description = description.trim();
   }
   return q;
 };
