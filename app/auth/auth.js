@@ -93,7 +93,7 @@ const login = async (req, res) => {
 };
 
 const getToken = (headers) => {
-  if (headers?.authorization) {
+  if (headers && headers.authorization) {
     const parted = headers.authorization.split(' ');
     return parted.length === 2 ? parted[1] : null;
   }
