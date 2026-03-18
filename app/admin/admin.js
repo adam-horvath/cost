@@ -29,7 +29,7 @@ const archive = async (req, res) => {
 
 const acknowledge = async (req, res) => {
   const { user: admin } = await auth.getUserAndGroup(auth.getToken(req.headers));
-  if (!req.body?.email) {
+  if (!req.body || !req.body.email) {
     return res.status(400).send({ success: false, msg: 'Bad request (admin).' });
   }
   const user = await User.findOne({ email: req.body.email });
@@ -64,7 +64,7 @@ const deleteUser = async (req, res) => {
   if (!userToDelete) {
     return res.status(404).send({ success: false, msg: 'User not found.' });
   }
-  const isAdmin = requirerGroup.admin?.equals(requirer._id);
+  const isAdmin = requirerGroup.admin && requirerGroup.admin.equals(requirer._id);
   const targetInSameGroup = userToDelete.group_id.equals(requirerGroup._id);
   // Admin removing another member from their own group
   if (isAdmin && targetInSameGroup && userId !== requirer.id) {

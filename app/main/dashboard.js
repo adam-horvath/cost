@@ -25,7 +25,7 @@ const getMainDashboard = async (req, res) => {
     year: prevYear,
     month: prevMonth,
   });
-  const balance = (previousBalance?.amount ?? 0) + totalIncome - totalCost;
+  const balance = ((previousBalance && previousBalance.amount) ?? 0) + totalIncome - totalCost;
   const isAdmin = group.admin && group.admin.toString() === user.id;
   if (!isAdmin) {
     return res.status(200).send({ items: itemsOfDay, balance });
@@ -66,7 +66,7 @@ const computeStats = ({ itemsOfMonth, itemsOfPreviousMonth, previousBalance, yea
   for (const item of itemsOfPreviousMonth) {
     if (onceInMonthCategories.has(item.category)) costOnceOfPreviousMonth += item.amount;
   }
-  const previousAmount = previousBalance?.amount ?? 0;
+  const previousAmount = (previousBalance && previousBalance.amount) ?? 0;
   const balance = previousAmount + totalIncome - totalCost;
   const balanceInMonth = totalIncome - totalCost;
   const endInstantOfMonth = new Date(year, month + 1, 0);
@@ -142,7 +142,7 @@ const deleteItem = async (req, res) => {
 
 const updateItem = async (req, res) => {
   const newItem = req.body;
-  if (!newItem?.id || !newItem?.amount || !newItem?.category || !newItem?.category_type || !newItem?.date) {
+  if (!newItem || !newItem.id || !newItem.amount || !newItem.category || !newItem.category_type || !newItem.date) {
     return res.status(400).send({ success: false, msg: 'No item provided.' });
   }
   const { group } = await auth.getUserAndGroup(auth.getToken(req.headers));
@@ -193,7 +193,7 @@ const updateItem = async (req, res) => {
 
 const addItem = async (req, res) => {
   const input = req.body;
-  if (!input?.amount || !input?.category || !input?.category_type || !input?.date) {
+  if (!input || !input.amount || !input.category || !input.category_type || !input.date) {
     return res.status(400).send({ success: false, msg: 'No item provided.' });
   }
   const { group } = await auth.getUserAndGroup(auth.getToken(req.headers));
