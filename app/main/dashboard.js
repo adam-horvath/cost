@@ -25,7 +25,7 @@ const getMainDashboard = async (req, res) => {
     year: prevYear,
     month: prevMonth,
   });
-  const balance = ((previousBalance && previousBalance.amount) ?? 0) + totalIncome - totalCost;
+  const balance = ((previousBalance && previousBalance.amount) || 0) + totalIncome - totalCost;
   const isAdmin = group.admin && group.admin.toString() === user.id;
   if (!isAdmin) {
     return res.status(200).send({ items: itemsOfDay, balance });
@@ -66,7 +66,7 @@ const computeStats = ({ itemsOfMonth, itemsOfPreviousMonth, previousBalance, yea
   for (const item of itemsOfPreviousMonth) {
     if (onceInMonthCategories.has(item.category)) costOnceOfPreviousMonth += item.amount;
   }
-  const previousAmount = (previousBalance && previousBalance.amount) ?? 0;
+  const previousAmount = (previousBalance && previousBalance.amount) || 0;
   const balance = previousAmount + totalIncome - totalCost;
   const balanceInMonth = totalIncome - totalCost;
   const endInstantOfMonth = new Date(year, month + 1, 0);

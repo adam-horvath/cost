@@ -57,7 +57,7 @@ const getChartData = async (req, res) => {
           year: prev.year,
           month: prev.month,
         });
-        result['PREV_BALANCE'] = (prevBalance && prevBalance.amount) ?? 0;
+        result['PREV_BALANCE'] = (prevBalance && prevBalance.amount) || 0;
         result[categoryType] = await Promise.all(
           months.map(async (monthObj) => {
             const [costItems, incomeItems] = await Promise.all([
