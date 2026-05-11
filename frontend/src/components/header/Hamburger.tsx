@@ -60,7 +60,7 @@ export const Hamburger: FC<HamburgerProps> = ({
         className={`hamburger-panel ${openMenu ? 'open' : 'closed'}`}
       >
         <div className="menu-item">
-          <Link to="/cost" onClick={onMenuClick}>
+          <Link to="/" onClick={onMenuClick}>
             {t('MENU.MAIN')}
           </Link>
         </div>

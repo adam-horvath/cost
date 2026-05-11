@@ -107,3 +107,6 @@ dist
 
 data
 data/*
+
+hetzner*
+cost-ssh-key

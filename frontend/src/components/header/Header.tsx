@@ -12,8 +12,7 @@ import logo from 'assets/images/logo.svg';
 import './Header.scss';
 
 export interface HeaderProps
-  extends WithTranslation,
-    ConnectedProps<typeof connector> {}
+  extends WithTranslation, ConnectedProps<typeof connector> {}
 
 interface HeaderState {
   openMenu: boolean;
@@ -38,10 +37,10 @@ class Header extends Component<HeaderProps, HeaderState> {
     return (
       <header>
         <div className={'header-top'}>
-          <Link to="/cost">
+          <Link to="/">
             <img src={logo} className="logo" alt="logo" />
           </Link>
-          <Link to="/cost">
+          <Link to="/">
             <h1 className="title">{t('COMMON.APP_NAME')}</h1>
           </Link>
           {token ? (

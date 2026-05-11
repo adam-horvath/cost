@@ -9,7 +9,7 @@ export const Menu: FC<{}> = () => {
   return (
     <div className="menu row">
       <div className="entry-container col-sm-3">
-        <Link to="/cost" className="menu-entry">
+        <Link to="/" className="menu-entry">
           {t('MENU.MAIN')}
         </Link>
       </div>

@@ -1,11 +1,7 @@
 import axios, { AxiosError, AxiosRequestConfig } from 'axios';
-import { createBrowserHistory } from 'history';
 
 import { Token } from 'common/Constants';
-import store from 'store';
-import { showNotification } from 'store/common';
 import { NotificationType } from 'models/common.model';
-import { logout } from 'store/auth';
 
 export enum Methods {
   GET = 'GET',
@@ -19,15 +15,22 @@ export interface RequestConfig extends AxiosRequestConfig {
   method?: Methods;
 }
 
-// const API_BASE_URL = 'http://localhost:8080/api';
-const API_BASE_URL = 'https://horvathadam.info/api';
+const API_BASE_URL = import.meta.env.DEV
+  ? '/api'
+  : import.meta.env.VITE_API_BASE_URL || 'https://horvathadam.info/api';
 
 const axiosInstance = axios.create({});
 
 axiosInstance.interceptors.response.use(
   async (response) => response,
   async (error: AxiosError) => {
-    //store.dispatch(hideLoader());
+    const [{ default: store }, { showNotification }, { logout }] =
+      await Promise.all([
+        import('store'),
+        import('store/common'),
+        import('store/auth'),
+      ]);
+
     store.dispatch(
       showNotification({
         type: NotificationType.Error,
@@ -35,7 +38,7 @@ axiosInstance.interceptors.response.use(
       }),
     );
     store.dispatch(logout());
-    return Promise.reject(error);
+    throw error;
   },
 );
 

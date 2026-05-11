@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
-import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { Button, Dropdown, DropdownButton } from 'react-bootstrap';
 import { withTranslation, WithTranslation } from 'react-i18next';
 import { registerLocale } from 'react-datepicker';
 import moment from 'moment';
-import hu from 'date-fns/locale/hu';
+import { hu } from 'date-fns/locale/hu';
 
 import { compose } from 'utils/compose';
 import { getMoneyString } from 'utils/util';
@@ -33,9 +32,7 @@ import 'styles/dropdown.scss';
 import './Query.scss';
 
 export interface QueryPageProps
-  extends WithTranslation,
-    RouteComponentProps,
-    ConnectedProps<typeof connector> {}
+  extends WithTranslation, ConnectedProps<typeof connector> {}
 
 export interface QueryPageState {
   activeCollectionToggle: ToggleState;
@@ -108,7 +105,7 @@ class Query extends Component<QueryPageProps, QueryPageState> {
               ? CostCategoriesWithEmpty[selectedCategoryIndex]
               : IncomeCategoriesWithEmpty[selectedCategoryIndex]
           }`,
-        );
+        ) as QueryParamsModel['category'];
         if (activeExclusionToggle === ToggleState.Right) {
           params.exclude_category = true;
         }
@@ -493,4 +490,4 @@ const mapDispatchToProps = {
 
 const connector = connect(mapStateToProps, mapDispatchToProps);
 
-export default compose(connector)(withRouter(withTranslation()(Query)));
+export default compose(connector)(withTranslation()(Query));

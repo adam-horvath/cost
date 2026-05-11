@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
-import { Redirect, Route, Switch } from 'react-router';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 import Header from 'components/header/Header';
 import Login from 'pages/login/Login';
@@ -22,18 +22,18 @@ class App extends Component<AppProps> {
         <>
           <Header authenticated={!!token} />
           {!!token ? (
-            <Switch>
-              <Route exact path={'/cost'} component={Dashboard} />
-              <Route exact path={'/stats'} component={Stats} />
-              <Route exact path={'/query'} component={Query} />
-              <Route exact path="/chart" component={Charts} />
-              <Redirect to={'/cost'} />
-            </Switch>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/stats" element={<Stats />} />
+              <Route path="/query" element={<Query />} />
+              <Route path="/chart" element={<Charts />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
           ) : (
-            <Switch>
-              <Route exact path={'/cost'} component={Login} />
-              <Redirect to={'/cost'} />
-            </Switch>
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
           )}
           {!!notification ? <Notification /> : null}
         </>
