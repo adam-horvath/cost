@@ -8,7 +8,7 @@ import { Hamburger } from './Hamburger';
 import { Menu } from './Menu';
 import { logout } from 'store/auth';
 import { compose } from 'utils/compose';
-import logo from 'logo.svg';
+import logo from 'assets/images/logo.svg';
 import './Header.scss';
 
 export interface HeaderProps
