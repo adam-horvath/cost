@@ -1,19 +1,10 @@
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
-import { ProxyAgent } from 'proxy-agent';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   const proxyTarget = env.VITE_PROXY_TARGET || 'https://horvathadam.info';
-  const upstreamProxy =
-    env.HTTPS_PROXY ||
-    env.HTTP_PROXY ||
-    process.env.HTTPS_PROXY ||
-    process.env.HTTP_PROXY ||
-    process.env.https_proxy ||
-    process.env.http_proxy;
-  const proxyAgent = upstreamProxy ? new ProxyAgent(upstreamProxy) : undefined;
 
   return {
     plugins: [react()],
@@ -38,7 +29,6 @@ export default defineConfig(({ mode }) => {
           target: proxyTarget,
           changeOrigin: true,
           secure: false,
-          agent: proxyAgent,
         },
       },
     },
