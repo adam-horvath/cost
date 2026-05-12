@@ -17,7 +17,7 @@ export interface RequestConfig extends AxiosRequestConfig {
 
 const API_BASE_URL = import.meta.env.DEV
   ? '/api'
-  : import.meta.env.VITE_API_BASE_URL || 'https://horvathadam.info/api';
+  : import.meta.env.VITE_API_BASE_URL || 'http://178.105.90.5/api';
 
 const axiosInstance = axios.create({});
 

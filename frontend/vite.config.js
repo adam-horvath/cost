@@ -5,7 +5,7 @@ import { ProxyAgent } from 'proxy-agent';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
-  const proxyTarget = env.VITE_PROXY_TARGET || 'https://horvathadam.info';
+  const proxyTarget = env.VITE_PROXY_TARGET || 'http://178.105.90.5';
   const upstreamProxy =
     env.HTTPS_PROXY ||
     env.HTTP_PROXY ||
