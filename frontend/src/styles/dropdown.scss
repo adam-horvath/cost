@@ -1,4 +1,4 @@
-@import "styles/colors";
+@use "styles/colors" as *;
 
 .dropdown {
   width: 100%;

@@ -1,4 +1,4 @@
-@import "styles/colors";
+@use "styles/colors" as *;
 
 .toggle-button-container {
   display: flex;
