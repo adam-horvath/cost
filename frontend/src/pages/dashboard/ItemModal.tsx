@@ -2,7 +2,7 @@ import React, { ChangeEvent, FC, useEffect, useState } from 'react';
 import { registerLocale } from 'react-datepicker';
 import { Field, Form, Formik } from 'formik';
 import { useTranslation } from 'react-i18next';
-import hu from 'date-fns/locale/hu';
+import { hu } from 'date-fns/locale/hu';
 import { Button, Dropdown, DropdownButton, Modal } from 'react-bootstrap';
 
 import { CostCategories, IncomeCategories } from 'common/Constants';
@@ -100,10 +100,13 @@ export const ItemModal: FC<ItemModalProps> = ({
 
   const onSubmitForm = async (item: Omit<ItemParamsModel, 'category_type'>) => {
     const { date, category, amount, description } = item;
+    const translatedCategory = t(`COMMON.ENGLISH_CATEGORIES.${category}`) as
+      | CostCategory
+      | IncomeCategory;
     const data: ItemParamsModel = {
       category_type: isCost ? CategoryType.Cost : CategoryType.Income,
       date: date,
-      category: t(`COMMON.ENGLISH_CATEGORIES.${category}`),
+      category: translatedCategory,
       amount: amount,
       description: description?.trim() || '',
     };
@@ -113,11 +116,10 @@ export const ItemModal: FC<ItemModalProps> = ({
     if (
       description &&
       (!descriptionMapping[description.trim()] ||
-        descriptionMapping[description.trim()] !==
-          t(`COMMON.ENGLISH_CATEGORIES.${category}`))
+        descriptionMapping[description.trim()] !== translatedCategory)
     ) {
       setDescriptionMapping({
-        [description.trim()]: t(`COMMON.ENGLISH_CATEGORIES.${category}`),
+        [description.trim()]: translatedCategory,
       });
     }
     if (type === ModalType.ADD) {
@@ -198,17 +200,20 @@ export const ItemModal: FC<ItemModalProps> = ({
                   <label htmlFor={'category'} className="label category-label">
                     {t('DASHBOARD.ITEM_MODAL.CATEGORY')}
                   </label>
-                  <DropdownButton title={values.category} id="dropdown">
+                  <DropdownButton
+                    title={values.category}
+                    id="dropdown"
+                    onSelect={(selectedCategory) => {
+                      if (!selectedCategory) {
+                        return;
+                      }
+                      setFieldValue('category', selectedCategory);
+                      validateForm();
+                    }}
+                  >
                     {categories.map(
-                      (category: CostCategory | IncomeCategory, i: number) => (
-                        <Dropdown.Item
-                          eventKey={`${i}`}
-                          key={i}
-                          onSelect={() => {
-                            setFieldValue('category', categories[i]);
-                            validateForm();
-                          }}
-                        >
+                      (category: CostCategory | IncomeCategory) => (
+                        <Dropdown.Item eventKey={category} key={category}>
                           {category}
                         </Dropdown.Item>
                       ),
