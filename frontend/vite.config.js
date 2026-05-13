@@ -4,7 +4,7 @@ import path from 'node:path';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
-  const proxyTarget = env.VITE_PROXY_TARGET || 'https://horvathadam.info';
+  const proxyTarget = env.VITE_PROXY_TARGET || 'http://178.105.90.5';
 
   return {
     plugins: [react()],
