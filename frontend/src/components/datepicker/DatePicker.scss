@@ -110,6 +110,10 @@
   }
   .react-datepicker__header {
     background: $light-gray;
+
+    h2 {
+      padding-top: 3px;
+    }
   }
   .react-datepicker__navigation {
     border: 0.5rem solid transparent;
@@ -118,11 +122,9 @@
     border-image-slice: 100%;
     border-image-source: none;
     border-image-width: 1;
-    &.react-datepicker__navigation--previous {
-      border-right-color: #ccc;
-    }
-    &.react-datepicker__navigation--next {
-      border-left-color: #ccc;
+    &.react-datepicker__navigation--previous, &.react-datepicker__navigation--next {
+      border-top: 0;
+      margin-top: -0.2rem;
     }
   }
   .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle {

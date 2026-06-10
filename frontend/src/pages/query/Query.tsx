@@ -170,14 +170,21 @@ class Query extends Component<QueryPageProps, QueryPageState> {
 
   getMenuItems = (array: (CostCategory | IncomeCategory | '')[]) =>
     array.map((category, i) => (
-      <Dropdown.Item
-        eventKey={`${i}`}
-        key={i}
-        onSelect={() => this.onSelectCategory(i)}
-      >
+      <Dropdown.Item eventKey={`${i}`} key={i}>
         {category}
       </Dropdown.Item>
     ));
+
+  onSelectCategoryByEventKey = (eventKey: string | null) => {
+    if (eventKey === null) {
+      return;
+    }
+
+    const index = Number(eventKey);
+    if (!Number.isNaN(index)) {
+      this.onSelectCategory(index);
+    }
+  };
 
   onSelectCategory = (index: number) => {
     this.setState({ selectedCategoryIndex: index });
@@ -327,6 +334,7 @@ class Query extends Component<QueryPageProps, QueryPageState> {
                 </div>
                 <div className="category">
                   <DropdownButton
+                    onSelect={this.onSelectCategoryByEventKey}
                     title={
                       activeCategoryTypeToggle === ToggleState.Left
                         ? CostCategoriesWithEmpty[selectedCategoryIndex]
